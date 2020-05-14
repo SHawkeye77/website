@@ -1,0 +1,32 @@
+Title:
+game_1
+
+Description:
+"game_1" is the placeholder name for my text-based adventure game inspired by the classic "Zork" franchise. This is by far the project I am most proud of. I love thinking creatively and worldbuilding in my head, so in the summer of 2019 I decided to start work on a game that would bring something physical to my ideas.
+As a full time student, I don't have much time to work on it during the school year, but during every break and times when I have increased free time, I make sure to progress on it.
+
+
+In "game_1", players take control of a janitor landing on a martian base. Expecting a scene bustling with activity, you find it abandoned and ripe with foul play... Without even a minute to get your bearings, it's up to you to figure out what's going on deep in humanity's final frontier.
+
+
+You can find all the code here: https://github.com/shawkeye77/game_1
+
+
+Opening Text:
+==========================================================
+Date: May 10, 2045
+Location: 1,000 km from Mars, 54,599,000 km from Earth
+==========================================================
+You are almost to Mars.
+Until now, the intent of your solo flight from Earth was nothing more than an initial commute to work; you were just hired as Mars’ “facilities manager” (glorified janitor). Minutes ago, however, you received the following message…
+***
+Dear Mr. Adams,
+Our Martian station has failed to provide their daily report for three days now. We understand this is not your main employment objective, but due to the pressing nature of this issue and as an employee of the United Nations’ Extraterrestrial Expansion Association, we request your assistance in contacting our Martian-based communications director before your allotted rest and integration period. We suspect the problem stems from a malfunction with our transmitter’s photopropulsion apparatus, a problem, as you know, that is best handled by a team. It should not take longer than one work day. Thank you for your willingness to help.
+***
+A little less than an hour later, your ship touches down at the UNEEA's Martian base...
+
+
+Location: Office Hall
+A white, cylindrical tube. There are doors to the offices and conference room. A sign is tacked on to the door to the southeastern office.
+
+What do you do? ...

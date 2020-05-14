@@ -1,0 +1,10 @@
+Title:
+Alien Invasion
+
+Description:
+This is essentially the classic "Alien Invasion" arcade game coded with pygame.
+
+When I first self-taught myself python, which was my first introduction to coding/programming, I followed a textbook. One of the projects at the end was this. It's not perfectly organized, but since I had been coding for literally less than 3 months at the time I felt it was pretty good (and fun!) all things considered.
+
+
+You can find all the code here: https://github.com/SHawkeye77/alien_invasion

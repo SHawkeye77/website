@@ -1,0 +1,9 @@
+Title:
+STJ
+
+Description:
+STJ stands for "Sadness Trance Journal". Sometimes when you're sad, be it a breakup, a job loss, bad grades, etc., it helps to just take a minute to feel sad and think about your worries before moving on. When I felt like this once, instead of doing my homework like I should have, I decided to take the morning and code this up.
+
+The program pulls up a sad/nostalgic image (from an internal library, modify if you'd like) and a trance-y song (again from an internal library, modify if you'd like) to accompany it. You can type in whatever you'd like to get off your mind and then press enter to clear the screen. Hitting "tab" will swap to a new photo and a new song. This is a pretty weird project but I decided to include it anyway LOL.
+
+Code is here: https://github.com/SHawkeye77/stj
