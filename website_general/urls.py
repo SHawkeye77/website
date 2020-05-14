@@ -1,4 +1,4 @@
-"""personal_portfolio URL Configuration
+"""Base website URL Configuration module
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/1.11/topics/http/urls/
@@ -17,7 +17,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
-from personal_portfolio import views, settings
+from website_general import views, settings
 
 urlpatterns = [
     # Landing page
@@ -30,6 +30,8 @@ urlpatterns = [
     path("blog/", include("blog.urls")),
     # All the urls for my influential media collection (IMC)
     path("imc/", include("imc.urls")),
+    # All the urls for my articles section
+    path("articles/", include("articles.urls")),
 ]
 
 

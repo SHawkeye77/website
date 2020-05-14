@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block page_content %}
+<div class="col-md-10 offset-md-1">
+    <h1>Favorite Unix Commands</h1>
+    <p>Unix is powerful. One wrong move in the terminal can disrupt an entire system. Here are a few of my favorite simple, beautiful, and chaotic commands (in no particular order):</p>
+
+    <code>$ rm -rf /</code>
+    <p>Deletes entire computer</p>
+    <br>
+
+    <code>$ :(){:|:&};</code>
+    <p>Creates a "Fork Bomb", which is a process that continuously replicates itself to no end; effectively depleting all of a system's OS resources and rendering it useless</p>
+    <br>
+
+    <code>$ chmod -R 777 /</code>
+    <p>Gives everyone and everything read/write/execute permission for everything on the machine</p>
+    <br>
+
+    <code>$ mv ~ /dev/null</code>
+    <p>Put your entire home directory in the "null" folder, essentially deleting it all.</p>
+</div>
+{% endblock %}
