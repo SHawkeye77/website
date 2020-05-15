@@ -2,26 +2,29 @@
 from __future__ import unicode_literals
 
 from django.shortcuts import render
-from projects.models import Project
 
 # View for the project_index section. Holds general info on the projects
 def project_index(request):
-    # Database query to get all objects in the "Project" table
-    projects = Project.objects.all()
-    # Context dictionary that holds info about our template
-    context = {
-        'projects': projects
-    }
-    return render(request, 'project_index.html', context)
+    return render(request, 'project_index.html', {})
 
-# View for project_detail. Will give us more info on individual projects.
-def project_detail(request, pk):
-    # Querying to find project key associated with given argument of project key
-    project = Project.objects.get(pk=pk)
-    # Context dictionart that holds info about our template
-    context = {
-        'project': project
-    }
-    return render(request, 'project_detail.html', context)
+# View game_1 page
+def game_1(request):
+    return render(request, "game_1.html", {})
+
+# View alien_invasion page
+def alien_invasion(request):
+    return render(request, "alien_invasion.html", {})
+
+# View website page
+def website(request):
+    return render(request, "website.html", {})
+
+# View stj page
+def stj(request):
+    return render(request, "stj.html", {})
+
+# View ttt page
+def ttt(request):
+    return render(request, "ttt.html", {})
 
 

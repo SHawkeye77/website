@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+{% block page_content %}
+
+<h1>Alien Invasion</h1>
+<div class="row">
+    <div>
+        <img src="{% static "projects/alien_invasion.png" %}" alt="" width="50%">
+    </div>
+    <div>
+        <br>
+        <h5>About the project:</h5>
+        <p>
+            When I first self-taught myself python, which was my first introduction to coding/programming, I followed a textbook. One of the projects at the end was this.
+            It's not perfectly organized, but since I had been coding for literally less than 3 months at the time I felt it was pretty good (and fun!) all things considered.
+        </p>
+        <p>
+            <a href="https://github.com/SHawkeye77/alien_invasion">You can find all the code here.</a>
+        </p>
+    </div>
+</div>
+
+{% endblock %}

@@ -2,21 +2,69 @@
 {% load static %}
 {% block page_content %}
 <h1>Projects</h1>
+
+<h6>
+    Here is a collection of all of my personal coding projects. None of these were work/school assignments, just stuff
+    I made and did for fun!
+</h6>
 <div class="row">
-{% for project in projects %}
+
+
+
     <div class="col-md-4">
         <div class="card mb-2">
-            <img class="card-img-top" src="{{ project.image.url }}">
+            <img class="card-img-top" src="{% static "projects/alien_invasion.png" %}">
             <div class="card-body">
-                <h5 class="card-title">{{ project.title }}</h5>
-                <p class="card-text">{{ project.description | slice:":207"}}</p>
-                <a href="{% url 'project_detail' project.pk %}"
-                   class="btn btn-primary">
-                    Read More
-                </a>
+                <h5 class="card-title">Alien Invasion</h5>
+                <p class="card-text">The classic arcade game in pygame</p>
+                <center><a href="alien_invasion" class="btn btn-primary">Read More</a></center>
             </div>
         </div>
     </div>
-    {% endfor %}
+
+    <div class="col-md-4">
+        <div class="card mb-2">
+            <img class="card-img-top" src="{% static "projects/game_1.png" %}">
+            <div class="card-body">
+                <h5 class="card-title">game_1</h5>
+                <p class="card-text">A sci-fi, text adventure game based on Zork</p>
+                <center><a href="game_1" class="btn btn-primary">Read More</a></center>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card mb-2">
+            <img class="card-img-top" src="{% static "projects/stj.png" %}">
+            <div class="card-body">
+                <h5 class="card-title">STJ</h5>
+                <p class="card-text">A silly relaxation app</p>
+                <center><a href="stj" class="btn btn-primary">Read More</a></center>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card mb-2">
+            <img class="card-img-top" src="{% static "projects/website.png" %}">
+            <div class="card-body">
+                <h5 class="card-title">Website</h5>
+                <p class="card-text">This website (wow, how meta)</p>
+                <center><a href="website" class="btn btn-primary">Read More</a></center>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card mb-2">
+            <img class="card-img-top" src="{% static "projects/ttt.png" %}">
+            <div class="card-body">
+                <h5 class="card-title">TTT</h5>
+                <p class="card-text">An unbeatable tic-tac-toe game</p>
+                <center><a href="ttt" class="btn btn-primary">Read More</a></center>
+            </div>
+        </div>
+    </div>
+
 </div>
 {% endblock %}

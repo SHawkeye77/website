@@ -9,6 +9,10 @@ path("url_after_base", views.associated_view_method, name="associated_name"),
 
 urlpatterns = [
     path("", views.project_index, name="project_index"),
-    path("<int:pk>/", views.project_detail, name="project_detail"),
+    path("game_1/", views.game_1, name="game_1"),
+    path("alien_invasion/", views.alien_invasion, name="alien_invasion"),
+    path("website/", views.website, name="website"),
+    path("stj/", views.stj, name="stj"),
+    path("ttt/", views.ttt, name="ttt"),
 ]
 
