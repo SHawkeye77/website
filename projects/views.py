@@ -27,4 +27,8 @@ def stj(request):
 def ttt(request):
     return render(request, "ttt.html", {})
 
+# View encrypt_word page
+def encrypt_word(request):
+    return render(request, "encrypt_word.html", {})
+
 
