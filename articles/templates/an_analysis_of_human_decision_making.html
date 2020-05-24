@@ -1,0 +1,245 @@
+{% extends "base.html" %}
+{% block page_content %}
+
+<div class="col-md-10 offset-md-1">
+    <h1>
+        An Analysis of Human Decision Making
+    </h1>
+    <p>
+        Introduction:
+
+        Everything in life can be boiled down to a single equation. In a sense,
+        humans are nothing more than more complex (or less complex?) computers. Originally, the word
+        "computer" was actually used to describe humans - "human computers" carried out calculations
+        and computations. Alan Turing said in 1950 - "The human computer is supposed to be following
+        fixed rules; he has no authority to deviate from them in any detail."
+    </p>
+
+    <p>
+        What if we could come up with a way to make all of our decisions like "human computers". I will argue that 
+        it is in
+        everyone's best interest to make every decision in their life based on the effect it
+        will have on their happiness. That is the <i>"fixed rule"</i> of life. Everyone lives and makes decisions for
+        one single reason: to increase their own personal happiness such that the pros outweigh the cons. You decide
+        to eat a sandwich when you are hungry? You're doing this because removing the discomfort 
+        of hunger will cause a net increase on your happiness. 
+        You decide to follow Christianity? You believe that, by your own assessment of probability, it is
+        possible God exists and spending eternity in Heaven will cause eternal happiness rather than eternal suffering
+        in Hell, which outweighs all negative repercussions of being a Christian. You decide to donate money
+        to a disaster relief charity? You believe the personal satisfaction of donation outweighs the
+        satisfaction that that money could give you otherwise. There is no good or evil (in the definitive sense of
+        the world), there is only a bunch of computers walking around, attempting to maximize an internal variable representing
+        happiness.
+
+        Every decision you and I make is meant to maximize our net happiness, something I will, from here on out, refer
+        to with the variable <i>NH</i>. This is true for every single decision. Big or small. Any given second of your
+        day, you are making a variety of decisions, and whether you know it or not, every single one is made (in your
+        assessment) to maximize <i>NH</i>. Please allow me give some examples:
+        <ul>
+            <li>
+                You are sitting at your desk at work and your forearm itches. Should you itch it or not?<br>
+                <ul><li>A few pros of itching:
+                <ul>
+                    <li>
+                         Relief of discomfort.
+                    </li>
+                </ul>
+                </li><li>A few cons of itching:
+                <ul>
+                    <li>
+                        Itching will take a small amount of physical exertion.
+                    </li>
+                    <li>
+                        It will lead to a short period of productivity loss. There is a very small chance it leads to
+                        distraction causing even more productivity loss.
+                    </li>
+                    <li>
+                        Sometimes itching causes an itch to increase in the future.
+                    </li>
+                </ul>
+                </ul></li>
+            </li>
+            <li>
+                You are asked by your sister to babysit her daughter. Should you babysit or not?<br>
+                <ul><li>A few pros of babysitting:
+                <ul>
+                    <li>
+                        Taking care of the child means she would likely recognise your kindness and be more
+                        willing to do something for you in the future.
+                    </li>
+                    <li>
+                        Denial may come off as a slight which could mean
+                        negative feelings that could impact your relationship with her in the future.
+                    </li>
+                    <li>
+                        Babysitting would cause some contentment based on the fact that you helped someone close
+                        to you with a problem they had.
+                    </li></ul>
+                </li><li>A few cons of babysitting:
+                <ul>
+                    <li>
+                        Relaxing would feel better at the moment.
+                    </li>
+                    <li>
+                        Could set a precedent that you are willing (and maybe even eager?) to help out with things
+                        like this in the future.
+                    </li>
+                </ul>
+                </li></ul></li>
+        </ul>
+
+        A few notes on the previous examples:
+        Weighing pros and cons can get really, really complicated really, really fast. While it's pretty
+        easy to come up with almost all notable repercussions of a small decision like whether or not you should itch
+        your forearm, when
+        it gets any more complicated it seems almost impossible to go through even a fraction of the possible repercussions.
+        How do we get around this in decision making? 
+        I think the best way to go about this is to narrow it down to the most important
+        repercussions, where a "repercussion" is an outcome, resulting from the decion, that will alter your <i>NH</i>.
+        Say there are "n" repercussions to a decision. Most likely "n" is huge - it could be millions, but one
+        could argue the vast majority of repercussions don't even matter; you only need to come up with and analyze the most
+        impactful repercussions such that successful analysis of those few would lead to a decision that would, beyond a 
+        reasonable doubt, be unable to be flipped from negative to positive or positive to negative based on the net
+        change resulting from all other repercussions. 
+
+        <br><br>
+        Additionally, why do we never consciously analyze decisions like the first example? Most decisions we make 
+        have a set of possible outcomes that present such a small impact on our overall <i>NH</i> that 
+        it is more damaging to our <i>NH</i> to spend time thinking about which path to take
+        than it is to just make a quick decision. This is the case with subconscious decisions. We don't think about
+        if we want to scratch an itch on our arm, our internal computer decides, before we even need to waste time
+        thinking about it, that it is more worth it to just carry out one of the options of safe decisions.
+
+
+        <br><br>
+        Equation analysis:
+
+        In my notation, <i>NH</i> is a spectrum. The negative end of the spectrum goes from slight discomfort
+        to unignorable, unfathomable pain, while the positive end goes from mild satisfaction to absolute euphoria, while zero on the scale signifies complete indifference, a total lack of suffering as well as lack of joy.
+        <br>
+        I think every decision can be made based on the evaluation of the following equation:<br><br>
+        <center><i>NH = I<sub>L</sub> + p &middot; E<sub>R</sub></i></center>
+        <ul>
+            <li>
+                <i>NH</i>: "Net Happiness" - the variable discussed in detail earlier. If the calculated NH value is
+                negative, the decision should not be made OR should be weighed with the indecision.
+            </li>
+            <li>
+                <i>I<sub>L</sub></i>: Lump sum of net happiness loss as a result of the decision. This can only be a
+                negative number. It represents a numerical value for the "cons" of the decision. This number must be
+                scaled by time. E.g. If I lose 5 happiness points per day, and the payout is not for 30 days,
+                then <i>I<sub>L</sub></i> = -150 total for this decision. Note that for any even somewhat complicated decision,
+                this will actually be the sum of all detrimental repercussions of the decision, not just a single number.
+            </li>
+            <li>
+                <i>p</i>: Probability of receiving the full expected payout down the road (must be 0-1). This is just 1 if
+                the payout is immediate and certain, but if the decision makes use of delayed gratification this is
+                important to take into account.
+            </li>
+            <li>
+                <i>E<sub>R</sub></i>: The expected, eventual lump sum happiness payout of the original decision. Be sure to
+                scale this by time. E.g. If the initial decision’s full payout will be an increase in happiness
+                of 5 points/day for 7 days, then <i>E<sub>R</sub></i> = 35. Note that for any even somewhat complicated decision, this will actually be the sum of all net positive repercussions of the decision, not just a single
+                number.
+            </li>
+        </ul>
+    
+    <br>
+    This all might seem dumb or obvious; <i>I am saying we make decisions to be happy? Duh!</i> At the very least, though,
+    I think this is actually a great way to analyze difficult decisions. On a grand scale, however, imagine if we could
+    create a way to accurately calculate and make decisions based on this. A computer could make every
+    single decision for you in your life. This would allow you to go through life in an optimal fashion.
+
+    <br><br>
+    Notes on using this equation:
+    <ul>
+        <li>
+            "Machine learning" (learning from experience) should be utilized. Learning from the outcome of one
+            decision will impact decisions in the future. Due to this, new decisions should likely be scaled
+            higher, as they provide more data for your machine learning.
+        </li>
+        <li>
+            Likely more important than any physical decisions for <i>NH</i> are intangible decisions, such as what
+            to spend time thinking about.
+        </li>
+    </ul>
+
+    <br>
+    Questions/Problems:
+    <ul>
+        <li>
+            Are the <i>NH</i> values of others important whatsoever beyond their influence on my own <i>NH</i> 
+            (in the fact that others' happiness increases my own happiness)? 
+            If so, doesn't that contradict the assertion that one should not be relying on others for my own happiness? If there is a middle ground, how do I define that spectrum in relation to my current idea?
+        </li>
+        <li>
+            Is it feasible to think this equation could ever be implemented beyond just a
+            thought exercise or a method to guide decision making?
+        </li>
+        <li>
+            Could I come up with real units for <i>NH</i>? Four major chemicals in our brain affect happiness:
+            dopamine, oxytocin, serotonin, and endorphins. If there was some way to measure the actual chemical effect
+            of decisions we could make this more tangible useful.
+        </li>
+    </ul>
+    <br>
+    
+<p>
+    <h2>Try it yourself:</h2>
+    <TABLE BORDER=2 CELLSPACING=2 CELLPADDING=2>
+
+    <tr>
+    <td>Variable</td>
+    <td>Value</td>
+    </tr>
+
+    <tr>
+    <td><center><i>I<sub>L</sub></i></center></td>
+    <td><input type="text" id="IL" size=7 value=""></td>
+    </tr>
+
+    <tr>
+    <td><center><i>p</i></center></td>
+    <td><input type="text" id="p" size=7 value=""></td>
+    </tr>
+
+    <tr>
+    <td><center><i>E<sub>R</sub></i></center></td>
+    <td><input type="text" id="ER" size=7 value=""></td>
+    </tr>
+    </TABLE>
+
+    <br>
+</p>
+    <input type="button" value="Calculate Decision's NH Value" onclick="calculateNH()">
+
+    <hr>
+    <div id="outputDiv" style="height: 50px; width: 100%;"></div>
+
+    <script type="text/javascript">
+        function calculateNH() {
+            var IL = parseFloat(document.getElementById('IL').value);
+            var p  = parseFloat(document.getElementById('p').value);
+            var ER = parseFloat(document.getElementById('ER').value);
+            var NH = IL + p * ER;
+
+            var display=document.getElementById('outputDiv');
+            
+            if (NH > 0) {
+                display.innerHTML="NH Value: " + NH;
+                display.append("... \nDo this. It will increase your net happiness.");
+            } else
+            if (NH == 0) {
+                display.innerHTML="NH Value: " + NH;
+                display.append("... \nIt does not matter what you do in this situation.");
+            }
+            else {
+                display.innerHTML="NH Value: " + NH;
+                display.append("... \nDo not do this. It will decrease your net happiness.");
+            }
+        }
+
+    </script>
+
+</div>
+{% endblock %}

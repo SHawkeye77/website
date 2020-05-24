@@ -14,3 +14,6 @@ def favorite_star_wars_songs(request):
 
 def nintendo_franchises_ranked_by_soundtrack(request):
     return render(request, "nintendo_franchises_ranked_by_soundtrack.html", {})
+
+def an_analysis_of_human_decision_making(request):
+    return render(request, "an_analysis_of_human_decision_making.html", {})
