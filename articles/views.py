@@ -17,3 +17,6 @@ def nintendo_franchises_ranked_by_soundtrack(request):
 
 def an_analysis_of_human_decision_making(request):
     return render(request, "an_analysis_of_human_decision_making.html", {})
+
+def aurebesh_translator(request):
+    return render(request, "aurebesh_translator.html", {})

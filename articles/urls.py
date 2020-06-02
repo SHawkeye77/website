@@ -14,5 +14,7 @@ urlpatterns = [
          name="nintendo_franchises_ranked_by_soundtrack"),
     path("an_analysis_of_human_decision_making", views.an_analysis_of_human_decision_making,
          name="an_analysis_of_human_decision_making"),
+    path("aurebesh_translator", views.aurebesh_translator,
+         name="aurebesh_translator"),
 ]
 

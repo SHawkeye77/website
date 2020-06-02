@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+{% load static %}
+{% block page_content %}
+<link rel="stylesheet" type="text/css" href = "{% static 'main.css' %}">
+
+<h1>Aurebesh Translator</h1>
+
+<p>
+    One of the beauties of the Star Wars galaxy is its diversity, one of its more notable elements being the galaxy's
+    wide array of languages and dialects. By far the most common language, however, is <i>Galactic Basic</i> which is often simplified to
+    just <i>Basic</i>. This is the standard language in the galaxy and is comprised mostly of what we would call
+    the English language. <i>Aurebesh</i> is the name of the written script used to transcribe Basic, and can be
+    seen all over the Star Wars movies, comics, television series, etc.
+</p>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <figure class="figure">
+                <img src="{% static "aurebesh_examples/tractor_beam_aurebesh.png" %}" class="figure-img img-fluid rounded">
+                <figcaption class="figure-caption">
+                    Tractor beam control from Episode IV. The top version shows the original English while the bottom
+                    shows the translation to Aurebesh, which was added in later releases of the movie.
+                </figcaption>
+            </figure>
+        </div>
+        <div class="col">
+            <figure class="figure">
+                <img src="{% static "aurebesh_examples/rey_aurebesh.jpg" %}" class="figure-img img-fluid rounded">
+                <br><br><figcaption class="figure-caption">
+                    The helmet Rey wears at her "home" in Episode VII has Aurebesh inscription on the side.
+                </figcaption>
+            </figure>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <figure class="figure">
+                <img src="{% static "aurebesh_examples/galaxys_edge_aurebesh.jpg" %}" class="figure-img img-fluid rounded">
+                <figcaption class="figure-caption">
+                    Disney World's Star Wars theme park "Galaxy's Edge" has Aurebesh signs scattered about the park.
+                </figcaption>
+            </figure>
+        </div>
+        <div class="col">
+            <figure class="figure">
+                <img src="{% static "aurebesh_examples/clone_wars_aurebesh.png" %}" class="figure-img img-fluid rounded">
+                <figcaption class="figure-caption">
+                    Aurebesh is heavily used in Star Wars animated series including all seasons of Clone Wars.
+                </figcaption>
+            </figure>
+        </div>
+    </div>
+
+    <br><br>
+    <p>
+        The English translation of Aurebesh is almost completely a one-to-one translation of English to Aurebesh
+        letters, as seen in this diagram:
+    </p>
+    <center><img src="{% static "aurebesh_examples/aurebesh.png" %}" class="figure-img img-fluid rounded" width="50%"></center>
+
+    <br><br>
+    <p>
+        Below, I used an Aurebesh font and some javascript to translate anything you input in English to its
+        Aurebesh equivalent. Try it out!<br>
+        Usage Note: Only use Aurebesh-alphabet characters (see image above)
+    </p>
+
+</div>
+
+<p>
+    <h5>Enter English Text Here:</h5>
+    <input id = "english_text" name="english_text" placeholder = "Type here..." />
+    <br><br>
+    <input type="button" value="Translate English to Aurebesh Script" onclick="calculateAurebesh()">
+    <br><br>
+    <p_aurebesh id="outputP" style="height: 50px; width: 100%;"></p_aurebesh>
+</p>
+
+
+<script type="text/javascript">
+    function calculateAurebesh() {
+        var text = document.getElementById('english_text').value;
+        var display=document.getElementById('outputP');
+        display.innerHTML=text;
+    }
+</script>
+
+{% endblock %}
