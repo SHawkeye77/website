@@ -31,4 +31,7 @@ def ttt(request):
 def encrypt_word(request):
     return render(request, "encrypt_word.html", {})
 
+# View Conway's Game of Life page
+def cgol(request):
+    return render(request, "cgol.html", {})
 

@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% load static %}
+{% block page_content %}
+
+<center><h1>Conway's Game of Life</h1></center>
+<br>
+<div>
+    <img src="{% static "projects/cgol_example_line.png" %}" alt="" width="100%">
+</div>
+<div>
+    <br>
+    <h5>Introduction</h5>
+    <p>
+        Welcome to the world's first zero-player game. Famous mathematician and computer scientist John von Neumann
+        once pondered one of humanity's most curious questions: "Is it possible to colonize Mars?" As a logical man, he theorized
+        ways humanity would have to set out on this goal. It was clear to him that, were humans to get to Mars, we would
+        first have to colonize it with machines. These machines would need a way to reproduce, which means they would
+        need the capacity to create things as smart or smarter than themselves. How is this possible? How can something
+        complex grow out of something simple? This question applies far beyond the concept of traveling to Mars. What
+        about intelligence? How could something like sentience grow out of the relatively simple laws of the natural
+        world? Conway's Game of Life is Mathematician John Conway's exploration of that.<br>
+    </p>
+
+    <h5>Setup</h5>
+    <p>
+        Conway's Game of Life is played on an infinitely-large 2D grid. Each space, aka "cell", on the grid can be in
+        one of two states: alive or dead (boolean). Each cell has eight "neighbors" - the cells in the eight cells
+        surrounding it.<br>
+    </p>
+
+    <h5>Rules</h5>
+    <p>
+        Conway's Game of Life, set up on a simple grid filled with simple states, is governed by just three simple
+        rules. At the end of each time step, all cells on the board are modified in accordance with the following rules:
+        <ul>
+            <li>Any live cell with two or three live neighbors survives (stays alive)</li>
+            <li>Any dead cell with exactly three live neighbors is born (becomes alive)</li>
+            <li>All other cells stay dead or are killed</li>
+        </ul>
+    </p>
+
+    <h5>Outcome</h5>
+    <p>
+        How can such a simple setup and set of rules lead to anything worthwhile? By following these three simple rules,
+        random seeds can blossom into ecosystems. Patterns arise, states form then die, states form then stabilize. If
+        this amount of beauty can arise from the simplicity of three laws and a boolean board, what could something
+        relatively complex like the laws of physics create?<br><br>
+        To see some larger-scale simulations of Conway's Game of Life, check out this video (the coolest simulations
+        come later on):
+    </p>
+   <center><iframe width="560" height="315" src="https://www.youtube.com/embed/C2vgICfQawE?start=83" frameborder="10"
+            allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+   </iframe></center>
+
+    <h5>My Game Engine</h5>
+    <p>
+        Here are a couple of things to note when running my version of Conway's Game of Life... First, the number of
+        rows/columns can not be larger than the number of cells that would fit on the current terminal screen, or else
+        it won’t show up as nicely. Second, everything outside of the n x n grid is treated as “dead”. To run the game,
+        perform the following steps:
+        <ol>
+            <li>Maximize your terminal window and make the font relatively small</li>
+            <li>Create an n x n csv file filled with only 1s and 0s and place it in the same directory as cgol.py</li>
+            <li>Run cgol.py and input the filename and “n” as the number of rows/columns</li>
+            <li>To advance one time step, click the right arrow key</li>
+            <li>To exit, just exit the terminal window or ctrl-c</li>
+        </ol>
+        I hope you enjoy my version of Conway's Game of Life :)<br><br><a href="https://github.com/SHawkeye77/cgol">
+        You can find the source code to my game engine, which uses the "curses" python library to dynamically
+        write to your terminal, here</a>.
+    </p>
+
+    <p>
+
+    </p>
+</div>
+
+{% endblock %}

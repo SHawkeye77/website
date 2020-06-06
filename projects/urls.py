@@ -15,5 +15,6 @@ urlpatterns = [
     path("stj/", views.stj, name="stj"),
     path("ttt/", views.ttt, name="ttt"),
     path("encrypt_word/", views.encrypt_word, name="encrypt_word"),
+    path("cgol/", views.cgol, name="cgol"),
 ]
 
