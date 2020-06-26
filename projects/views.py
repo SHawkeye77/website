@@ -35,3 +35,6 @@ def encrypt_word(request):
 def cgol(request):
     return render(request, "cgol.html", {})
 
+# View chatbot page
+def chatbot(request):
+    return render(request, "chatbot.html", {})

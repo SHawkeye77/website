@@ -16,5 +16,6 @@ urlpatterns = [
     path("ttt/", views.ttt, name="ttt"),
     path("encrypt_word/", views.encrypt_word, name="encrypt_word"),
     path("cgol/", views.cgol, name="cgol"),
+    path("chatbot/", views.chatbot, name="chatbot"),
 ]
 
