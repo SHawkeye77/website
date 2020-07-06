@@ -1,28 +1,30 @@
 {% extends "base.html" %}
 {% block page_content %}
-<div class="col-md-10 offset-md-1">
     <h1>Favorite Physics Equations</h1>
 
     <p>Here are some of my favorite equations (no particular order).</p>
 
-    <p>1) <i>N = R<sub>*</sub> · f<sub>p</sub> · n<sub>e</sub> · f<sub>1</sub> · f<sub>i</sub> · f<sub>c</sub> · L</i> "The Drake Equation" </p>
+    <p>1) The Drake Equation 
+        $$ N = R_* · f_p · n_e · f_1 · f_i · f_c · L$$
+    </p>
     <p>
         What it is/why I love it: Theoretically computes the number of civilizations (with which communication
         might be possible) in our galaxy. Doesn't have much practical use but always gets me wondering.
     </p>
     <p>Variables:</p>
     <ul>
-        <li><i>N</i> : Number of civilizations in our galaxy where communication might be possible</li>
-        <li><i>R<sub>*</sub></i> : Rate of star formation in our galaxy</li>
-        <li><i>f<sub>p</sub></i> : Fraction of stars in our galaxy with planets in their system</li>
-        <li><i>n<sub>e</sub></i> : Fraction of planets (per each star with associated planets) that could potentially support life</li>
-        <li><i>f<sub>1</sub></i> : Fraction of planets that <i>could</i> support life which actually <i>develop</i> life</li>
-        <li><i>f<sub>i</sub></i> : Fraction of planets with <i>intelligent</i> life to planets with <i>any</i> life</li>
-        <li><i>f<sub>c</sub></i> : Fraction of civilizations that broadcast detectable signals into space to all civilizations</li>
-        <li><i>L</i> : Length of time such <i>f<sub>c</sub></i> civilizations broadcast</li>
+        <li> $N$ : Number of civilizations in our galaxy where communication might be possible</li>
+        <li> $R_*$: Rate of star formation in our galaxy</li>
+        <li> $f_p$ : Fraction of stars in our galaxy with planets in their system</li>
+        <li> $n_e$ : Fraction of planets (per each star with associated planets) that could potentially support life</li>
+        <li> $f_1$ : Fraction of planets that <i>could</i> support life which actually <i>develop</i> life</li>
+        <li> $f_i$ : Fraction of planets with <i>intelligent</i> life to planets with <i>any</i> life</li>
+        <li> $f_c$ : Fraction of civilizations that broadcast detectable signals into space to all civilizations</li>
+        <li> $L$ : Length of time such <i>f<sub>c</sub></i> civilizations broadcast</li>
     </ul>
 
-    <p>2) <i>F = m · a</i> "Newton's Second Law"</p>
+    <p>2) Newton's Second Law
+        $$F = m · a$$
     <p>
         What it is/why I love it: Calculates net force on an object. When I studied physics, my professors would relate everything
         back to this equation. No matter how complicated, it seemed like every equation could be related in some way to this simple
@@ -30,40 +32,69 @@
     </p>
     <p>Variables:</p>
     <ul>
-        <li><i>F</i> : Net force</li>
-        <li><i>m</i> : Mass of the object</li>
-        <li><i>a</i> : Acceleration of the object</li>
+        <li>$F$: Net force</li>
+        <li>$m$ : Mass of the object</li>
+        <li>$a$ : Acceleration of the object</li>
     </ul>
 
-    <p>3) <i>&Delta;x · &Delta;p &ge; h / (4 · &pi;)</i> "Heisenberg Uncertainty Principle"</p>
+    <p>3) Heisenberg Uncertainty Principle 
+        $$\Delta x · \Delta p \ge \frac{h}{4 · \pi}$$
     <p>
-        This equation literally has people questioning life itself. Some people refuse to believe in this because it
+        What it is/why I love it: This equation literally has people questioning life itself. Some people refuse to believe in this because it
         means that there is <i>always</i> an inherent uncertainty surrounding specific particles. Their position and
         momentum can not both be known exactly. Ever.
     </p>
     <p>Variables:</p>
     <ul>
-        <li><i>&Delta;x</i> : Uncertainty in position</li>
-        <li><i>&Delta;p</i> : Uncertainty in momentum</li>
-        <li><i>h</i> : Planck constant</li>
+        <li>$\Delta x$ : Uncertainty in position</li>
+        <li>$\Delta p$ : Uncertainty in momentum</li>
+        <li>$h$ : Planck constant</li>
     </ul>
 
-    <p>4) <i>&Delta;S &ge; 0</i> "Second Law of Thermodynamics"</p>
+    <p>4) Second Law of Thermodynamics
+        $$\Delta S \ge 0 $$
+    </p>
     <p>
-        This equation means (net) entropy, aka "chaos", if you will, always increases in the universe. Awesome...
+        What it is/why I love it: This equation means (net) entropy, "chaos" if you will, always increases in the universe. Awesome...
     </p>
     <p>Variables:</p>
     <ul>
-        <li><i>&Delta;S</i> : Change in entropy</li>
+        <li>$\Delta S$ : Change in entropy</li>
     </ul>
 
-    <p>5) <i>i<sup>2</sup> = -1</i> "Definition of complex numbers"</p>
+    <p>5) Definition of complex numbers
+        $$ i^2 = -1 $$
+    </p>
     <p>
-        Opens up an entire new area of mathematics necessary in fields like quantum mechanics.
+        What it is/why I love it: Opens up an entire new area of mathematics necessary in fields like quantum mechanics.
     </p>
     <p>Variables:</p>
     <ul>
-        <li><i>i</i> : Imaginary number defined as the square root of -1</li>
+        <li>$i$ : Imaginary number defined as the square root of -1</li>
+    </ul>
+
+    <p>6) Shapley Value 
+        $$\phi _i (v) = \sum_{S \subseteq (N \setminus \{i\})}
+        \frac{\lvert S \rvert ! · (n - \lvert S \rvert - 1)!}{n!} ·
+        (v(S \cup \{i\}) - v(S)))$$</p>
+    <p>
+        What it is/why I love it: Game theory, in a sense the study of decision making, has two sub-fields: cooperative 
+        (participants are working towards a common goal) and non-cooperative (participants
+        are competing for something). The Shapley value, calculated in cooperative decision making, produces
+        the theoretically ideal value for the payoff for each player in the coalition of participants.
+        It produces the fairest distributions of amassed assets AKA the best communal outcome.
+        I am very interested in the science of decision making <a href="an_analysis_of_human_decision_making">(see this
+        article of mine)</a>, so I love the fact that there is a beautiful, thorough equation that can be used
+        to make a theoretically-irrefutable best decision.
+    </p>
+    <p>Variables:</p>
+    <ul>
+        <li>$\phi _i$ : The value player $i$ gets using the "fairest" distribution of total assets gathered.</li>
+        <li>$v(S)$ : A function that takes a subset of the overall set of players $N$ and produces a real number.
+            Function $v(S)$ produces a real number, called the "worth" of subset $S$, representing the total
+            expected payoff if all members in subset $S$ work together. Note $v$ must satisfy $v(\emptyset ) = 0$.</li>
+        <li>$N$ : A set of $n$ players.</li>
+        <li>$n$ : The total number of players.</li>
     </ul>
 
     <br>
