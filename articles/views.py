@@ -20,3 +20,6 @@ def an_analysis_of_human_decision_making(request):
 
 def aurebesh_translator(request):
     return render(request, "aurebesh_translator.html", {})
+
+def rokos_baselisk(request):
+    return render(request, "rokos_baselisk.html", {})

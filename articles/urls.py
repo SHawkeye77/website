@@ -16,5 +16,7 @@ urlpatterns = [
          name="an_analysis_of_human_decision_making"),
     path("aurebesh_translator", views.aurebesh_translator,
          name="aurebesh_translator"),
+    path("rokos_baselisk", views.rokos_baselisk,
+         name="rokos_baselisk"),
 ]
 
