@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     "blog",
     "imc",
     "articles",
+    "ytpr",
 ]
 
 MIDDLEWARE = [

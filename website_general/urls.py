@@ -32,6 +32,8 @@ urlpatterns = [
     path("imc/", include("imc.urls")),
     # All the urls for my articles section
     path("articles/", include("articles.urls")),
+    # All the urls for my YouTube Playlist Randomizer section
+    path("ytpr/", include("ytpr.urls")),
 ]
 
 
