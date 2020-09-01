@@ -18,5 +18,11 @@ urlpatterns = [
          name="aurebesh_translator"),
     path("rokos_baselisk", views.rokos_baselisk,
          name="rokos_baselisk"),
+    path("dangers_of_phishing", views.dangers_of_phishing,
+         name="dangers_of_phishing"),
+    path("wells_fargo_login", views.wells_fargo_login,
+        name="wells_fargo_login"),
+    path("phishing_warning", views.phishing_warning,
+        name="phishing_warning"),
 ]
 

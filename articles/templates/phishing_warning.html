@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block page_content %}
+
+<h4>Your data could have just been stolen</h4><br>
+
+<script>
+    var queryString = decodeURIComponent(window.location.search); //parsing 
+    queryString = queryString.substring(1); 
+    var queries = queryString.split("&"); 
+    document.write("Wells Fargo Login Information:<br>&emsp;Your Username: " + queries[0].substring(5) + "<br>"); 
+    document.write("&emsp;Your Password: " + queries[1].substring(5));
+</script>  
+
+<br><br>
+<p>
+    The above credentials could be used to log in to your Wells Fargo account or could be taken and used on other sites.
+    Additionally, the tab/window (depending on browser settings) you were just on has been redirected to the 
+    official Wells Fargo site. This means you would likely be tricked into thinking your first attempt just didn't 
+    work. If you attempted to sign in again, it would work and would likely throw off any suspicion you might have 
+    since you're now on the legitimate site. Be careful what places you trust with your personal information!
+</p>
+
+
+{% endblock %}

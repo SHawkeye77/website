@@ -23,3 +23,12 @@ def aurebesh_translator(request):
 
 def rokos_baselisk(request):
     return render(request, "rokos_baselisk.html", {})
+
+def dangers_of_phishing(request):
+    return render(request, "dangers_of_phishing.html", {})
+
+def wells_fargo_login(request):
+    return render(request, "wells_fargo_login.html", {})
+
+def phishing_warning(request):
+    return render(request, "phishing_warning.html", {})

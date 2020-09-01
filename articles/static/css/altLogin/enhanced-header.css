@@ -1,0 +1,213 @@
+#body header {
+    border-bottom: 0;
+    height: auto;
+    min-width: initial;
+}
+
+#body main {
+    margin: 20px auto 0;
+}
+
+#body header div {
+    max-width: 100%;
+    display: block;
+    margin: 0px;
+    position: relative;
+    height: auto;
+}
+
+#body section[data-id=hero] {
+    height: auto;
+    overflow: visible;
+}
+
+#body header ul {
+    list-style: none;
+    position: static;
+}
+
+#body header .enhanced-header {
+    position: relative;
+    height: 100%;
+    font-family: 'Wells Fargo Sans';
+}
+
+#body header .header-top {
+    height: 60px;
+}
+
+#body header .header-content {
+    max-width: 722px;
+    margin: auto;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+#body header .flex-container {
+    display: flex;
+    position: relative;
+}
+
+#body header .header-top {
+    height: 60px;
+    background-color: #d71e28;
+    border-bottom: 4px solid #fcc60a;
+    padding: 0 10px;
+}
+
+#body header .header-top .header-content {
+    height: 60px;
+}
+
+#body header .header-bottom {
+    height: 51px;
+    padding-top: 16px;
+    border-bottom:3px solid #dfdfdf;
+    box-sizing: border-box;
+    padding-bottom: 17px;
+}
+
+#body header .header-bottom .header-content {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#body header .header-brand-logo {
+    color: #fff;
+    font-size: 26px;
+    font-family: 'Wells Fargo Sans';
+    margin-top: 17px;
+    margin-bottom: 17px;
+
+}
+
+#body header .header-brand-logo a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#body header .header-brand-logo img {
+    width: 211px;
+    height: 22px;
+}
+
+#body header .header-nav-links {
+    align-items: center;
+    margin-top: 17px;
+    margin-bottom: 17px;
+}
+
+#body header .header-nav-link {
+    margin-right: 16px;
+}
+
+.header-nav-link a {
+    color: #fff;
+    font-size: 13px;
+    font-family:  'Wells Fargo Sans';
+    text-decoration: none;
+    outline: none;
+}
+
+
+#body header .header-search input {
+    border-radius: 8px;
+    border: none;
+    height: 36px;
+    width: 89px;
+    font-family:'Wells Fargo Sans';
+    padding: 0 0 0 8px;
+}
+
+#body header .header-search {
+    align-items: center;
+    display: flex;
+    position: relative
+}
+
+.header-search-form {
+    align-items: center;
+    display: flex;
+    position: relative;
+}
+
+.header-search-icon {
+    width: 20px;
+    height: 20px;
+    right: 8px;
+    top: 8px;
+    position: absolute;
+    border-radius: 8px;
+}
+
+#body header ul li a {
+    font-size: 13px;
+    font-family: 'Wells Fargo Sans';
+}
+
+#body header ul li {
+    float: left;
+    margin-left: 16px;
+}
+
+.header-nav-link a:focus {
+    text-decoration: underline;
+}
+
+@media screen and (-ms-high-contrast: black-on-white) {  
+    #body header .header-top, #body header .header-bottom {
+        background-color: #000;
+        border-bottom: 4px solid #fff;
+    }
+    
+    #body header .header-bottom {
+        border-bottom: 3px solid #fff;
+    }
+    
+    .header-nav-link a, #body header ul li a {
+        color: #fcc60a
+    }
+
+    .header-nav-link a:focus {
+        outline-width: 1px;
+        outline-style: dotted; 
+        outline-color:  #fcc60a;
+    }
+
+    
+}
+
+
+@media screen and (-ms-high-contrast: white-on-black) { 
+    #body header .header-search input {
+        background: #fff;
+    }
+    #body header .header-search input:-ms-input-placeholder {
+        color: #000;
+
+    }
+    .header-nav-link a:focus {
+        outline-width: 1px;
+        outline-style: dotted; 
+        outline-color:  #fcc60a;
+    }
+    
+}
+
+#body header[origin=enroll] {
+    height: auto;
+}
+
+
+@media (max-width: 721px) {
+#body header[origin=applyauth], #body header[origin=apply] {
+    
+    border-bottom:0px solid #dfdfdf  !important;
+}
+
+#body footer{
+   /* position: fixed;
+    bottom: 0; */
+}
+}
