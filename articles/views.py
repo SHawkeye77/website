@@ -27,8 +27,10 @@ def rokos_baselisk(request):
 def dangers_of_phishing(request):
     return render(request, "dangers_of_phishing.html", {})
 
+""" Note: The following were implemented above, but they had to be removed because of Heroku policy.
 def wells_fargo_login(request):
     return render(request, "wells_fargo_login.html", {})
 
 def phishing_warning(request):
     return render(request, "phishing_warning.html", {})
+"""
