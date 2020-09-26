@@ -28,6 +28,8 @@ DEBUG = True
 ALLOWED_HOSTS = [
     'samuelhohenshell.herokuapp.com',
     'localhost',
+    'www.samuelhohenshell.com',
+    'samuelhohenshell.com',
 ]
 
 
