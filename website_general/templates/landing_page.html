@@ -1,8 +1,15 @@
 {% extends "base.html" %}
-
+{% load static %}
 {% block page_content %}
 <h1><center>Samuel Hohenshell - Portfolio Website</center></h1>
-<br><br>
+
+<br>
+<div style="text-align: center">
+    <img src="{% static "projects/headshot.png" %}" width="10%"> <!-- NOTE: Using "projects" static folder since I only have one image for the main page -->
+</div>
+<br>
+
+<br>
 <div class="container">
     <div class="row">
         <div class="col">
