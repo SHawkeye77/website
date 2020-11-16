@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block page_content %}
 <div class="col-md-8 offset-md-2">
-    <h1>Blog Index</h1>
+    <h1 style="text-align:center;">Blog Index</h1>
     <p>NOTE: This is not being used for anything but an example of functionality at the moment.</p>
     <hr>
     {% for post in posts %}
@@ -19,4 +19,26 @@
     <p>{{ post.body | slice:":400" }}...</p>
     {% endfor %}
 </div>
+<!-- The following "br"s are to make it look good in browser -->
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
 {% endblock %}
