@@ -1,103 +1,104 @@
 {% extends "base.html" %}
 {% load static %}
 {% block page_content %}
+<div class="container-fluid bg-primary">
+<div class="container bg-primary text-secondary">
+    <br>
+    <h1 class="text-center">The Dangers of Phishing</h1>
 
-<h1>The Dangers of Phishing</h1><br>
+    <h8>Disclaimer: This is for educational purposes only. It is becoming increasingly important to educate people on phishing and how easy it is to set up.</h8><br><br>
 
-<h8>Disclaimer: This is for educational purposes only. It is becoming increasingly important to educate people on phishing and how easy it is to set up.</h8><br><br>
+    <h4>What is Phishing and How Can You Avoid it?</h4>
+    <p>
+        Phishing is the nefarious act of stealing one's sensitive information by masquerading as a 
+        reputable digital source. The most common ways to do this are by pretending to be a banking agent, 
+        social media employee, etc. to gain the user's trust and have them give up their personal information. This
+        can be done via email spoofing, fake messages, fake websites, etc. Phishing relies on <i>social engineering</i>, a
+        critical hacking skill that relies on no computer skills whatsoever. Social engineering is when hackers 
+        psychologically manipulate people to gain their trust and have them divulge things they wouldn't otherwise give such 
+        as usernames/passwords, pin numbers, etc. This can be done online or in person. The following are a few techniques 
+        you can use to avoid phishing scams. Note that using one (or even all!) of these does not ensure your safety, however.
+        The best defense is simply using common sense to avoid sites/people/accounts you wouldn't normally trust.
+        <ul>
+            <li>
+                <b>Use a different password for every site:</b> Even though most secure websites like Wells Fargo or E-Trade 
+                have extra precautions in place to ensure hackers can't take money without more effort than just e-credentials, nothing
+                is stopping hackers from using their stolen usernames and passwords for those sites on other, less secure sites.
+            </li>
+            <li>
+                <b>Keep your internet browser up to date:</b> Hackers often exploit out-of-date computers problems with fixes already released
+                for them, relying on the laziness of users to keep their scam or hack alive. 
+            </li>
+            <li>
+                <b>Ensure any emails/messages you receive are from verified senders:</b> Emails should come from company emails and messages
+                from verified accounts. URLs should also be checked to ensure they are both legitimate and use secure protocol like HTTPS.
+            </li>
+        </ul>
+    </p>
 
-<h4>What is Phishing and How Can You Avoid it?</h4>
-<p>
-    Phishing is the nefarious act of stealing one's sensitive information by masquerading as a 
-    reputable digital source. The most common ways to do this are by pretending to be a banking agent, 
-    social media employee, etc. to gain the user's trust and have them give up their personal information. This
-    can be done via email spoofing, fake messages, fake websites, etc. Phishing relies on <i>social engineering</i>, a
-    critical hacking skill that relies on no computer skills whatsoever. Social engineering is when hackers 
-    psychologically manipulate people to gain their trust and have them divulge things they wouldn't otherwise give such 
-    as usernames/passwords, pin numbers, etc. This can be done online or in person. The following are a few techniques 
-    you can use to avoid phishing scams. Note that using one (or even all!) of these does not ensure your safety, however.
-    The best defense is simply using common sense to avoid sites/people/accounts you wouldn't normally trust.
-    <ul>
-        <li>
-            <b>Use a different password for every site:</b> Even though most secure websites like Wells Fargo or E-Trade 
-            have extra precautions in place to ensure hackers can't take money without more effort than just e-credentials, nothing
-            is stopping hackers from using their stolen usernames and passwords for those sites on other, less secure sites.
-        </li>
-        <li>
-            <b>Keep your internet browser up to date:</b> Hackers often exploit out-of-date computers problems with fixes already released
-            for them, relying on the laziness of users to keep their scam or hack alive. 
-        </li>
-        <li>
-            <b>Ensure any emails/messages you receive are from verified senders:</b> Emails should come from company emails and messages
-            from verified accounts. URLs should also be checked to ensure they are both legitimate and use secure protocol like HTTPS.
-        </li>
-    </ul>
-</p><br>
+    <hr>
+    <h4>How are Phishing Scams Set Up?</h4>
+    <p>
+        It is surprisingly easy to set up a phishing scam. To demonstrate the simplicity, I've set 
+        up the following (fake) phishing scam with minimal knowledge on the topic and a 
+        lazy Saturday afternoon's worth of work. It would rely on spamming the email below to the masses, hoping 
+        a few gullible recipients actually try to login at the given link, where their username 
+        and password could be logged and exploited (I obviously didn't implement the logging and
+        exploiting part). This process could be greatly improved were the phisher to do things like (i) get a 
+        more official-sounding email address, (ii) dress up the email to properly simulate a Wells Fargo email,
+        (iii) create a custom url that looks more official, etc. Here are the steps I went through to make this simple scam:
+        <ol>
+            <li>
+                Use <code class="text-danger">wget</code> to create a local copy of the login page you want to simulate
+                <ul>
+                    <li><code class="text-danger">wget --mirror --convert-links --adjust-extension --page-requisites --no-parent &lt;webpage&gt;</code></li>
+                    <li><code class="text-danger">&lt;webpage&gt;</code> should be a login page, such as "https://connect.secure.wellsfargo.com/auth/login/present"</li>
+                </ul>
+            </li>
+            <li>
+                Find the html element that takes in the user's username and password, and note their ID's
+                <ul><li>Just right click and "inspect element" in your browser at the place you put in the username/password</li></ul>
+            </li>
+            <li>
+                Find the javascript function that runs when the "Login", "Sign Up", or "Confirm", button is clicked. Add
+                javascript to do whatever you want with the username/password here. Gathering the username and password is as 
+                easy as adding lines like the following:
+                <ul>
+                    <li><code class="text-danger">var username = document.getElementById('&lt;USERNAME_ID&gt;').value; // Storing username</code></li>
+                    <li><code class="text-danger">var username = document.getElementById('&lt;PASSWORD_ID&gt;').value; // Storing password</code></li>
+                </ul>
+            </li>
+            <li>
+                Use social engineering to bring users to your phishing site. In my case, I would use the email below. Please try it out by clicking on the link in it. If you don't trust that I'm not logging passwords, just use a fake username/password ;).
+            </li>
+        </ol>
+    </p>
 
-<h4>How are Phishing Scams Set Up?</h4>
-<p>
-    It is surprisingly easy to set up a phishing scam. To demonstrate the simplicity, I've set 
-    up the following (fake) phishing scam with minimal knowledge on the topic and a 
-    lazy Saturday afternoon's worth of work. It would rely on spamming the email below to the masses, hoping 
-    a few gullible recipients actually try to login at the given link, where their username 
-    and password could be logged and exploited (I obviously didn't implement the logging and
-    exploiting part). This process could be greatly improved were the phisher to do things like (i) get a 
-    more official-sounding email address, (ii) dress up the email to properly simulate a Wells Fargo email,
-    (iii) create a custom url that looks more official, etc. Here are the steps I went through to make this simple scam:
-    <ol>
-        <li>
-            Use <code>wget</code> to create a local copy of the login page you want to simulate
-            <ul>
-                <li><code>wget --mirror --convert-links --adjust-extension --page-requisites --no-parent &lt;webpage&gt;</code></li>
-                <li><code>&lt;webpage&gt;</code> should be a login page, such as "https://connect.secure.wellsfargo.com/auth/login/present"</li>
-            </ul>
-        </li>
-        <li>
-            Find the html element that takes in the user's username and password, and note their ID's
-            <ul><li>Just right click and "inspect element" in your browser at the place you put in the username/password</li></ul>
-        </li>
-        <li>
-            Find the javascript function that runs when the "Login", "Sign Up", or "Confirm", button is clicked. Add
-            javascript to do whatever you want with the username/password here. Gathering the username and password is as 
-            easy as adding lines like the following:
-            <ul>
-                <li><code>var username = document.getElementById('&lt;USERNAME_ID&gt;').value; // Storing username</code></li>
-                <li><code>var username = document.getElementById('&lt;PASSWORD_ID&gt;').value; // Storing password</code></li>
-            </ul>
-        </li>
-        <li>
-            Use social engineering to bring users to your phishing site. In my case, I would use the email below. Please 
-            try it out by clicking on the link in it. If you don't trust that I'm not logging passwords, just use a fake username/password ;).
-        </li>
-    </ol>
-</p><br>
+    <hr>
+    <h4 class="font-italic">
+        Note: the following email's "Wells Fargo" link actually originally linked to a URL I created that implemented a Wells Fargo  phishing page. It looked identical to the actual login page except for its URL. When you entered your credentials,  it redirected to the real Wells Fargo login page while another tab opened up and printed what you entered as your username/password. When I added this to my website, however, my website was immediately taken down and my Heroku account was suspended. In order to get my account back online, I took it out, but know this is (unfortunately) very easy to do! Be careful!
+    </h4>
 
-<h4><i>
-    Note: the following email's "Wells Fargo" link actually originally linked to a URL I created that implemented a Wells Fargo 
-    phishing page. It looked identical to the actual login page except for its URL. When you entered your credentials, 
-    it redirected to the real Wells Fargo login page while another tab opened 
-    up and printed what you entered as your username/password. When I added this to
-    my website, however, my website was immediately taken down and my Heroku account was suspended. In order to get my account back
-    online, I took it out, but know this is (unfortunately) very easy to do! Be careful!
-</i></h4>
+    <br>
+    <div class="card font-italic" style="margin-left:5%; margin-right:5%">
+        <div class="card-body">
+            To: ___________<br>
+            From: WellsFargoCustomerSupport@gmail.com<br>
+            Subject: Fraudulent Login Attempt<br><br>
 
-<div class="card font-italic" style="margin-left:5%; margin-right:5%">
-    <div class="card-body">
-        To: ___________<br>
-        From: WellsFargoCustomerSupport@gmail.com<br>
-        Subject: Fraudulent Login Attempt<br><br>
+            Good afternoon valued Wells Fargo customer.<br><br>
+            Our customer service and security division detected a suspiction login to your account. At 
+            11:44 PM EST yesterday evening, user "Randall Keller" attempted to transfer $380.11 to account 
+            9e3d721f35248e8a3b6128ec0116169d. If this was you, please ignore this email. If this was 
+            not you, please confirm here: <!-- <a href="../articles/wells_fargo_login">www.wellsfargo.com/secure/login</a> -->www.wellsfargo.com/secure/login and the transfer will be retracted.<br><br>
 
-        Good afternoon valued Wells Fargo customer.<br><br>
-        Our customer service and security division detected a suspiction login to your account. At 
-        11:44 PM EST yesterday evening, user "Randall Keller" attempted to transfer $380.11 to account 
-        9e3d721f35248e8a3b6128ec0116169d. If this was you, please ignore this email. If this was 
-        not you, please confirm here: <!-- <a href="../articles/wells_fargo_login">www.wellsfargo.com/secure/login</a> -->www.wellsfargo.com/secure/login and the transfer will be retracted.<br><br>
-
-        Sincerely,<br><br>
-        Nancy Green<br>
-        Wells Fargo Customer Support<br>
+            Sincerely,<br><br>
+            Nancy Green<br>
+            Wells Fargo Customer Support<br>
+        </div>
     </div>
+    <br>
 </div>
-
+</div>
 
 {% endblock %}

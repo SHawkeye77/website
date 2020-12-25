@@ -2,61 +2,73 @@
 {% load static %}
 {% block page_content %}
 
-<h1><center>Encrypt Word</center></h1>
-<div class="row">
-    <div>
-        <br>
-        <h3>About the project:</h3>
-        <p>
-            This is a simple way to send encrypted messages over the premise of a boring email.<br> This was created
-            with help from a variety of different resources: Chapter 6 of <i>Impractical Python Projects</i> by Lee Vaughan,
-            study of the python-docx module, and study of the Vigenère cipher. More on the Vigenère cipher
-            can be found <a href="https://en.wikipedia.org/wiki/Vigenere_cipher">here</a>.
-        </p>
+<div class="container-fluid bg-primary">
+<div class="container bg-primary text-secondary">
+    <br>
+    <h1 class="text-center">Encrypt Word</h1>
+    <!-- Icon Divider-->
+    <div class="divider-custom">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+        <div class="divider-custom-line"></div>
+    </div>
+    <div class="row">
+        <div>
+            <h3>About the project</h3>
+            <p>
+                This is a simple way to send encrypted messages over the premise of a boring email.<br> This was created
+                with help from a variety of different resources: Chapter 6 of <i>Impractical Python Projects</i> by Lee Vaughan,
+                study of the python-docx module, and study of the Vigenère cipher. More on the Vigenère cipher
+                can be found <a class="text-danger" href="https://en.wikipedia.org/wiki/Vigenere_cipher">here</a>.
+            </p>
+            <hr>
+            <h3>How to use it</h3>
 
-        <h3>How to use it</h3>
+            <h5>Preparation</h5>
+            <p>
+                To prepare for running of the program, you must do the following:
+                <ul>
+                    <li>
+                        Create a .docx file containing the secret message you want to send.
+                        <br><img src="{% static 'projects/real_message.png' %}" alt="" width="50%"><br><br>
+                    </li>
+                    <li>
+                        Create a .docx file with a fake, boring message to hide your secret message in.</li>
+                        <img src="{% static 'projects/fake_message.png' %}" alt="" width="50%"><br><br>
+                    </li>
+                    <li>Create a .docx template file that contains no text but has all style, font, margins, etc. set.
+                        <br><img src="{% static 'projects/template.png' %}" alt="" width="50%"><br><br>
+                    </li>
+                </ul>
+                Additionally, if you'd like, you could customize the "HEADING_NAME", "HEADING_SUBTITLE", and "HEADING_DATE"
+                variables in "encode.py" to fit your needs.
+            </p>
+            <hr>
+            <h5>Encryption</h5>
+            <p>
+                To actually encrypt the code, just run "encode.py" and put in the names of the documents you created.
+                Additionally, you'll need to come up with a unique cipher key to guide the encryption. A new file will be
+                created with your hidden and encrypted message in it!
+            </p>
+            <p>
+                As you can see, the resulting message looks totally innocent, even when highlighting it with a cursor!
+                <br><br><img src="{% static 'projects/result.png' %}" alt="" width="50%"><br>
+            </p>
+            <hr>
+            <h5>Decryption</h5>
+            <p>
+                To see the text in the resulting file, you need to select all the text in the document and
+                highlight it in black. Then, the secret message, encrypted via the Vigenère cipher, will be visible.
+                <br><br><img src="{% static 'projects/result_vig.png' %}" alt="" width="50%"><br><br>
+            </p>
+            <hr>
+            <p>
+                To decrypt text encrypted by this program, you just have to run "decode.py" and copy-paste in the text
+                you want to decrypt.
+            <p><a class="text-danger" href="https://github.com/SHawkeye77/encrypt_word">You can find all the code here.</a></p><br><br>
 
-        <h5>Preparation</h5>
-        <p>
-            To prepare for running of the program, you must do the following:
-            <ul>
-                <li>
-                    Create a .docx file containing the secret message you want to send.
-                    <br><img src="{% static "projects/real_message.png" %}" alt="" width="50%"><br><br>
-                </li>
-                <li>
-                    Create a .docx file with a fake, boring message to hide your secret message in.</li>
-                    <img src="{% static "projects/fake_message.png" %}" alt="" width="50%"><br><br>
-                </li>
-                <li>Create a .docx template file that contains no text but has all style, font, margins, etc. set.
-                    <br><img src="{% static "projects/template.png" %}" alt="" width="50%"><br><br>
-                </li>
-            </ul>
-            Additionally, if you'd like, you could customize the "HEADING_NAME", "HEADING_SUBTITLE", and "HEADING_DATE"
-            variables in "encode.py" to fit your needs.
-        </p>
-        <h5>Encryption</h5>
-        <p>
-            To actually encrypt the code, just run "encode.py" and put in the names of the documents you created.
-            Additionally, you'll need to come up with a unique cipher key to guide the encryption. A new file will be
-            created with your hidden and encrypted message in it!
-        </p>
-        <p>
-            As you can see, the resulting message looks totally innocent, even when highlighting it with a cursor!
-            <br><br><img src="{% static "projects/result.png" %}" alt="" width="50%"><br>
-        </p>
-        <h5>Decryption</h5>
-        <p>
-            To see the text in the resulting file, you need to select all the text in the document and
-            highlight it in black. Then, the secret message, encrypted via the Vigenère cipher, will be visible.
-            <br><br><img src="{% static "projects/result_vig.png" %}" alt="" width="50%"><br><br>
-            To decrypt text encrypted by this program, you just have to run "decode.py" and copy-paste in the text
-            you want to decrypt.
-        </p>
-
-        <p><a href="https://github.com/SHawkeye77/encrypt_word">You can find all the code here.</a></p><br><br>
-
+        </div>
     </div>
 </div>
-
+</div>
 {% endblock %}

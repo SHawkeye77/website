@@ -1,26 +1,27 @@
 {% extends "base.html" %}
 {% load static %}
 {% block page_content %}
-
-    <h1>Roko's Basilisk - Ignorance is Bliss</h1><br>
-
+<div class="container-fluid bg-primary">
+<div class="container bg-primary text-secondary">
+    <br>
+    <h1 class="text-center">Roko's Basilisk - Ignorance is Bliss</h1>
+    <!-- Icon Divider-->
+    <div class="divider-custom">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+        <div class="divider-custom-line"></div>
+    </div>
     <h4>What is Roko's Basilisk?</h4>
     <div class="row">
         <div class="col-sm-6 col-md-8">
             <p>
-               Roko's Basilisk is a modern thought experiment created and posted by user "Roko" on the <a href="https://www.lesswrong.com/">LessWrong</a>
-               philosophy forum in mid-2010. Fearing dangerous repercussions, creator of the site Eliezer Yudkowsky took down the post soon after
-               it was written. Discussion of "Roko's Basilisk" continued to be banned on the forum for over five years due to users reporting psychological damage
-               from reading the post. While the thought experiment is widely referred to as "Roko's Basilisk", Roko did not mention this name
-               whatsoever in the original post. The thought experiment is referred to as a "basilisk" as a reference to the mythical creature of the
-               same name that can kill a foe with a single glance. With all this in mind, please make an informed decision about
-               continuing to read.
+               Roko's Basilisk is a modern thought experiment created and posted by user "Roko" on the <a class="text-danger" href="https://www.lesswrong.com/">LessWrong</a> philosophy forum in mid-2010. Fearing dangerous repercussions, creator of the site Eliezer Yudkowsky took down the post soon after it was written. Discussion of "Roko's Basilisk" continued to be banned on the forum for over five years due to users reporting psychological damage from reading the post. While the thought experiment is widely referred to as "Roko's Basilisk", Roko did not mention this name whatsoever in the original post. The thought experiment is referred to as a "basilisk" as a reference to the mythical creature of the same name that can kill a foe with a single glance. With all this in mind, please make an informed decision about continuing to read.
             </p>
         </div>
         <div class="col-6 col-md-4">
             <figure class="figure">
-                <img src="{% static "basilisk.jpg" %}" class="figure-img img-fluid rounded">
-                <figcaption class="figure-caption">
+                <img src="{% static 'basilisk.jpg' %}" class="figure-img img-fluid rounded">
+                <figcaption class="figure-caption text-secondary">
                     <center>Marcus Gheeraerts I - The Basilisk and the Weasel (Edited)</center>
                 </figcaption>
             </figure>
@@ -29,62 +30,32 @@
 
     <h4 style="text-align:center">The Thought Experiment</h4>
     <p>
-        Let's theorize about the future. Let's say, at some point in the future, humanity makes a monumental development.
-        Future humans are able to create a fabulously complex AI that works to perfectly improve the quality of life for all humans, forever.
-        It makes all important decisions for humanity, and all are made in the best interest of the human race.
-        It cures all diseases, it stops all wars, it matches everyone with their soul mate, it fixes all traffic jams.
-        Through the use of this AI, humanity becomes heaven on earth.
+        Let's theorize about the future. Let's say, at some point in the future, humanity makes a monumental development. Future humans are able to create a fabulously complex AI that works to perfectly improve the quality of life for all humans, forever. It makes all important decisions for humanity, and all are made in the best interest of the human race. It cures all diseases, it stops all wars, it matches everyone with their soul mate, it fixes all traffic jams. Through the use of this AI, humanity becomes heaven on earth.
         <br><br>
-        There is one exception. Because this future AI is so immensely good, it decides that anyone who did not work towards it existence
-        should be eternally punished. Anyone who knew it could be a possibility but refused to work towards its creation will have
-        a copy created of themselves that will be eternally tortured. The AI believes that anyone who did not act towards its creation
-        was acting against the best interests of humanity and, to avoid this, threatens this punishment. The AI creates a sort of retroactive blackmail
-        for anyone who didn't work towards the greater good: the complete euphoria created by the AI for the infinite future of humanity.
+        There is one exception. Because this future AI is so immensely good, it decides that anyone who did not work towards it existence should be eternally punished. Anyone who knew it could be a possibility but refused to work towards its creation will have a copy created of themselves that will be eternally tortured. The AI believes that anyone who did not act towards its creation was acting against the best interests of humanity and, to avoid this, threatens this punishment. The AI creates a sort of retroactive blackmail for anyone who didn't work towards the greater good: the complete euphoria created by the AI for the infinite future of humanity.
         <br><br>
-        Now, having read this article, this knowledge is unfortunately upon you (sorry). No matter how small of a chance you think
-        this AI has of being created, as long as it is not <i>exactly</i> zero, you should begin working towards bringing
-        it into existence, right? So, do you accept the possibility of eternal torture or will you devote your life
-        to work towards the AI's creation?
+        Now, having read this article, this knowledge is unfortunately upon you (sorry). No matter how small of a chance you think this AI has of being created, as long as it is not <i>exactly</i> zero, you should begin working towards bringing it into existence, right? So, do you accept the possibility of eternal torture or will you devote your life to work towards the AI's creation?
     </p>
 
-    <h4 style="text-align:center">My Thoughts/Analysis</h4>
+    <h4 class="text-center">My Thoughts/Analysis</h4>
     <div class="row">
         <div class="col-6 col-md-4">
             <figure class="figure">
-               <img src="{% static "nine_circles_of_hell_botticelli.jpeg" %}" class="figure-img img-fluid rounded">
-               <figcaption class="figure-caption">
+               <img src="{% static 'nine_circles_of_hell_botticelli.jpeg' %}" class="figure-img img-fluid rounded">
+               <figcaption class="figure-caption text-secondary">
                    <center>Sandro Botticelli - The Map of Hell</center>
                </figcaption>
             </figure>
         </div>
         <div class="col-sm-6 col-md-8">
             <p>
-                When I first heard about this, I was pleased to hear someone grappling with a problem I personally struggle with.
-                Not this AI, exactly, but the religious version of this thought experiment: Pascal's Wager. Pascal's Wager
-                was around long before Roko's Basilisk and goes as follows: say you are skeptical of Christianity. Say you think the
-                odds the Bible is true are less than 50%. Say you believe the chances are less than 1%, what about 0.00001%?
-                Pascal's Wager argues that no matter how improbable you believe the story of Christ is, <i>as long as you are
-                not 100% sure it is fake,</i> you should follow Christianity to avoid eternal suffering in Hell.
-                As both a religious skeptic and fan of game theory/logical decision making myself, this is something
-                I've wondered about. Even if I find the possibility of a science-denouncing, fairy tail religion stupid, even
-                insulting, shouldn't I, logically, still follow it? I certainly don't believe the chances of it being true are zero,
-                so shouldn't I commit my finite time on earth to avoiding the infinite torture I would experience in Hell?
+                When I first heard about this, I was pleased to hear someone grappling with a problem I personally struggle with. Not this AI, exactly, but the religious version of this thought experiment: Pascal's Wager. Pascal's Wager was around long before Roko's Basilisk and goes as follows: say you are skeptical of Christianity. Say you think the odds the Bible is true are less than 50%. Say you believe the chances are less than 1%, what about 0.00001%? Pascal's Wager argues that no matter how improbable you believe the story of Christ is, <i>as long as you are not 100% sure it is fake,</i> you should follow Christianity to avoid eternal suffering in Hell. As both a religious skeptic and fan of game theory/logical decision making myself, this is something I've wondered about. Even if I find the possibility of a science-denouncing, fairy tail religion stupid, even insulting, shouldn't I, logically, still follow it? I certainly don't believe the chances of it being true are zero, so shouldn't I commit my finite time on earth to avoiding the infinite torture I would experience in Hell?
                 <br><br>
             </p>
         </div>
     </div>
             <p>
-                Well, as you can see, I am not committing my life to Christ, nor am I building a futuristic, all-knowing AI. I am
-                writing this article. I think belief in this type of futuristic blackmail is dangerous. Why can't I just make up a
-                story like this myself? Let's say I am going to make a machine that eternally tortures anyone who doesn't give me
-                \$20. Why don't you send me $20? The odds are likely not zero! To be honest, I am not sure of the "solution" to this problem,
-                but another way I think of it is through the probability of contradiction. There are infinite situations that, if not followed,
-                could lead to your eternal torture. Therefore, there are infinite contradictory situations. How do you choose which one
-                to follow? For example, religion A believes followers of religion A go to Heaven and followers of religion B go to Hell.
-                On the contrary, religion B believes followers of religion A go to Hell and followers of religion B go to Heaven.
-                You want to avoid eternal torment; which religion should you follow? Long story short, I think this is just a thought
-                experiment. Most are not meant to be taken 100% seriously. Instead, they should be used as a way to analyze
-                how you think about real life situations.
+                Well, as you can see, I am not committing my life to Christ, nor am I building a futuristic, all-knowing AI. I am writing this article. I think belief in this type of futuristic blackmail is dangerous. Why can't I just make up a story like this myself? Let's say I am going to make a machine that eternally tortures anyone who doesn't give me \$20. Why don't you send me $20? The odds are likely not zero! To be honest, I am not sure of the "solution" to this problem, but another way I think of it is through the probability of contradiction. There are infinite situations that, if not followed, could lead to your eternal torture. Therefore, there are infinite contradictory situations. How do you choose which one to follow? For example, religion A believes followers of religion A go to Heaven and followers of religion B go to Hell. On the contrary, religion B believes followers of religion A go to Hell and followers of religion B go to Heaven. You want to avoid eternal torment; which religion should you follow? Long story short, I think this is just a thought experiment. Most are not meant to be taken 100% seriously. Instead, they should be used as a way to analyze how you think about real life situations.
             </p>
 
 
@@ -96,13 +67,13 @@
     </p>
     <p class="font-italic" style="margin-left:5%; margin-right:5%">
         Greetings _______.<br><br>
-        User "_______" filled out a form on <a href="../..">this</a> website requesting this automatically generated email be sent to
+        User "_______" filled out a form on <a class="text-danger" href="../..">this</a> website requesting this automatically generated email be sent to
         you. They wish to torture you with an intriguing choice: click the link below or don't. The link is not a virus
         or spam, and it will not steal any personal information. It simply contains an article. The link contains
         nothing illegal, and the information enclosed is known by many. You may find the information interesting;
         however, you may find yourself doomed to eternal torment. Curious?
         <br><br>
-            <a href="">Click here to give in</a>
+            <a class="text-danger" href="">Click here to give in</a>
         <br><br>
         Take care.
     </p>
@@ -128,11 +99,9 @@
         </form>
     </div>
     </div>
-
-
+    <br>
 
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
     <script type="text/javascript">
         (function(){
@@ -165,4 +134,6 @@
         });
     </script>
 
+</div>
+</div>
 {% endblock %}

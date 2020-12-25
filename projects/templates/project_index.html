@@ -1,127 +1,131 @@
 {% extends "base.html" %}
 {% load static %}
 {% block page_content %}
-<h1 style="text-align:center;">Projects</h1>
-<hr>
-<h6>
-    Here is a collection of all of my personal coding projects. None of these were work/school assignments, just stuff
-    I made and did for fun!
-</h6>
-<hr>
-<div class="row">
-
-    <!-- Alien Invasion -->
-    <div class="col-md-4">
-        <div class="card mb-2">
-            <img class="card-img-top" src="{% static "projects/alien_invasion.png" %}">
-            <div class="card-body">
-                <h5 class="card-title">Alien Invasion</h5>
-                <p class="card-text">The classic arcade game in pygame</p>
-                <center><a href="alien_invasion" class="btn btn-primary">Read More</a></center>
+<div class="container-fluid bg-primary">
+<div class="container bg-primary text-white">
+    <br>
+    <h1 class="text-center text-secondary">Projects</h1>
+    <!-- Icon Divider-->
+    <div class="divider-custom">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+        <div class="divider-custom-line"></div>
+    </div>
+    <h6 class="text-secondary">
+        Here is a collection of all of my personal coding projects. None of these were work/school assignments, just stuff I made and did for fun!
+    </h6>
+    <hr>
+    <div class="row">
+        <!-- Website -->
+        <div class="col-md-4">
+            <div class="card bg-secondary mb-2">
+                <img class="card-img-top" src="{% static 'projects/website.png' %}">
+                <div class="card-body">
+                    <h5 class="card-title">Website</h5>
+                    <p class="card-text">This website (very meta)</p>
+                    <center><a href="website" class="btn btn-primary">Read More</a></center>
+                </div>
             </div>
         </div>
-    </div>
 
-    <!-- game_1 -->
-    <div class="col-md-4">
-        <div class="card mb-2">
-            <img class="card-img-top" src="{% static "projects/game_1.png" %}">
-            <div class="card-body">
-                <h5 class="card-title">game_1</h5>
-                <p class="card-text">A sci-fi, text adventure game based on Zork</p>
-                <center><a href="game_1" class="btn btn-primary">Read More</a></center>
+        <!-- game_1 -->
+        <div class="col-md-4">
+            <div class="card bg-secondary mb-2">
+                <img class="card-img-top" src="{% static 'projects/game_1.png' %}">
+                <div class="card-body">
+                    <h5 class="card-title">game_1</h5>
+                    <p class="card-text">A sci-fi, text adventure game based on Zork</p>
+                    <center><a href="game_1" class="btn btn-primary">Read More</a></center>
+                </div>
             </div>
         </div>
-    </div>
 
-    <!-- Sadness Trance Journal -->
-    <div class="col-md-4">
-        <div class="card mb-2">
-            <img class="card-img-top" src="{% static "projects/stj.png" %}">
-            <div class="card-body">
-                <h5 class="card-title">STJ</h5>
-                <p class="card-text">A silly relaxation app</p>
-                <center><a href="stj" class="btn btn-primary">Read More</a></center>
+        <!-- Sadness Trance Journal -->
+        <div class="col-md-4">
+            <div class="card bg-secondary mb-2">
+                <img class="card-img-top" src="{% static 'projects/stj.png' %}">
+                <div class="card-body">
+                    <h5 class="card-title">STJ</h5>
+                    <p class="card-text">A silly relaxation app</p>
+                    <center><a href="stj" class="btn btn-primary">Read More</a></center>
+                </div>
             </div>
         </div>
-    </div>
 
+    </div>
+    <hr>
+    <div class="row">
+        <!-- Alien Invasion -->
+        <div class="col-md-4">
+            <div class="card bg-secondary mb-2">
+                <img class="card-img-top" src="{% static 'projects/alien_invasion.png' %}">
+                <div class="card-body">
+                    <h5 class="card-title">Alien Invasion</h5>
+                    <p class="card-text">The classic arcade game in pygame</p>
+                    <center><a href="alien_invasion" class="btn btn-primary">Read More</a></center>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tic-Tac-Toe -->
+        <div class="col-md-4">
+            <div class="card bg-secondary mb-2">
+                <img class="card-img-top" src="{% static 'projects/ttt.png' %}">
+                <div class="card-body">
+                    <h5 class="card-title">TTT</h5>
+                    <p class="card-text">An unbeatable tic-tac-toe game</p>
+                    <center><a href="ttt" class="btn btn-primary">Read More</a></center>
+                </div>
+            </div>
+        </div>
+
+        <!-- Encrypt Word -->
+        <div class="col-md-4">
+            <div class="card bg-secondary mb-2">
+                <img class="card-img-top" src="{% static 'projects/result_vig.png' %}">
+                <div class="card-body">
+                    <h5 class="card-title">Encrypt Word</h5>
+                    <p class="card-text">
+                        A program that encrypts a secret message with the Vigenère cipher and hides it in a normal-looking word-doc with invisible ink.
+                    </p>
+                    <center><a href="encrypt_word" class="btn btn-primary">Read More</a></center>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <hr>
+    <div class="row">
+
+        <!-- Conway's Game of Life -->
+        <div class="col-md-4">
+            <div class="card bg-secondary mb-2">
+                <img class="card-img-top" src="{% static 'projects/cgol_example.png' %}">
+                <div class="card-body">
+                    <h5 class="card-title">Conway's Game of Life</h5>
+                    <p class="card-text">
+                        A terminal application that reads in an initial seed from a csv file then runs the zero player game "Conway's Game of Life" on it.
+                    </p>
+                    <center><a href="cgol" class="btn btn-primary">Read More</a></center>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chatbot -->
+        <div class="col-md-4">
+            <div class="card bg-secondary mb-2">
+                <img class="card-img-top" src="{% static 'projects/chatbot_example.png' %}">
+                <div class="card-body">
+                    <h5 class="card-title">Chatbot</h5>
+                    <p class="card-text">
+                        A markov chain based text analysis bot that (1) reads and sorts through a text file then (2) produces a random string of characters of a specified length "speaking" like the analyzed text.
+                    </p>
+                    <center><a href="chatbot" class="btn btn-primary">Read More</a></center>
+                </div>
+            </div>
+        </div>
+
+    </div>
 </div>
-<hr>
-<div class="row">
-    <!-- Website -->
-    <div class="col-md-4">
-        <div class="card mb-2">
-            <img class="card-img-top" src="{% static "projects/website.png" %}">
-            <div class="card-body">
-                <h5 class="card-title">Website</h5>
-                <p class="card-text">This website (wow, how meta)</p>
-                <center><a href="website" class="btn btn-primary">Read More</a></center>
-            </div>
-        </div>
-    </div>
-
-    <!-- Tic-Tac-Toe -->
-    <div class="col-md-4">
-        <div class="card mb-2">
-            <img class="card-img-top" src="{% static "projects/ttt.png" %}">
-            <div class="card-body">
-                <h5 class="card-title">TTT</h5>
-                <p class="card-text">An unbeatable tic-tac-toe game</p>
-                <center><a href="ttt" class="btn btn-primary">Read More</a></center>
-            </div>
-        </div>
-    </div>
-
-    <!-- Encrypt Word -->
-    <div class="col-md-4">
-        <div class="card mb-2">
-            <img class="card-img-top" src="{% static "projects/result_vig.png" %}">
-            <div class="card-body">
-                <h5 class="card-title">Encrypt Word</h5>
-                <p class="card-text">
-                    A program that encrypts a secret message with the Vigenère cipher and hides
-                    it in a normal-looking word-doc with invisible ink.
-                </p>
-                <center><a href="encrypt_word" class="btn btn-primary">Read More</a></center>
-            </div>
-        </div>
-    </div>
-
 </div>
-<hr>
-<div class="row">
-
-    <!-- Conway's Game of Life -->
-    <div class="col-md-4">
-        <div class="card mb-2">
-            <img class="card-img-top" src="{% static "projects/cgol_example.png" %}">
-            <div class="card-body">
-                <h5 class="card-title">Conway's Game of Life</h5>
-                <p class="card-text">
-                    A terminal application that reads in an initial seed from a csv file then runs the
-                    zero player game "Conway's Game of Life" on it.
-                </p>
-                <center><a href="cgol" class="btn btn-primary">Read More</a></center>
-            </div>
-        </div>
-    </div>
-
-    <!-- Chatbot -->
-    <div class="col-md-4">
-        <div class="card mb-2">
-            <img class="card-img-top" src="{% static "projects/chatbot_example.png" %}">
-            <div class="card-body">
-                <h5 class="card-title">Chatbot</h5>
-                <p class="card-text">
-                    A markov chain based text analysis bot that (1) reads and sorts through a text file then (2) produces
-                    a random string of characters of a specified length "speaking" like the analyzed text.
-                </p>
-                <center><a href="chatbot" class="btn btn-primary">Read More</a></center>
-            </div>
-        </div>
-    </div>
-
-</div>
-
 {% endblock %}

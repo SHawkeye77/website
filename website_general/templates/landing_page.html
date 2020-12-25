@@ -1,62 +1,317 @@
 {% extends "base.html" %}
 {% load static %}
 {% block page_content %}
-<h1><center>Samuel Hohenshell - Portfolio Website</center></h1>
 
-<br>
-<div style="text-align: center">
-    <img src="{% static "projects/headshot.png" %}" width="10%"> <!-- NOTE: Using "projects" static folder since I only have one image for the main page -->
-</div>
-<br>
+<!-- Masthead-->
+<header class="masthead bg-primary text-white text-center">
+    <div class="container d-flex align-items-center flex-column">
+        <!-- Masthead Avatar Image-->
+        <img class="masthead-avatar mb-5" src="{% static 'projects/avataaars.svg' %}" alt="" />
+        <!-- Masthead Heading-->
+        <h1 class="masthead-heading text-uppercase mb-0">Samuel Hohenshell</h1>
+        <!-- Icon Divider-->
+        <div class="divider-custom divider-light">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+            <div class="divider-custom-line"></div>
+        </div>
+        <!-- Masthead Subheading-->
+        <p class="masthead-subheading font-weight-light mb-0">
+            University of Minnesota - Twin Cities - Class of 2021<br>
+            Portfolio/Personal/Hobby Website
+        </p>
+    </div>
+</header>
 
-<br>
-<div class="container">
-    <div class="row">
-        <div class="col">
-            <h4>Who am I?</h4>
-            <p>
+<!-- Portfolio Section-->
+<section class="page-section portfolio" id="portfolio">
+    <div class="container">
+        <!-- Portfolio Section Heading-->
+        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Site Map</h2>
+        <!-- Icon Divider-->
+        <div class="divider-custom">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+            <div class="divider-custom-line"></div>
+        </div>
+        <!-- Portfolio Grid Items-->
+        <div class="row justify-content-center">
+            <!-- Portfolio Item 1 (Projects)-->
+            <div class="col-md-6 col-lg-4 mb-5">
+                <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal1">
+                    <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                        <div class="portfolio-item-caption-content text-center text-white">
+                            <i class="fas fa-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <img class="img-fluid" src="{% static 'projects/projects_icon.png' %}" alt="" />
+                </div>
+                <h3 class="text-center text-secondary mb-0">
+                    Projects
+                </h3>
+            </div>
+
+            <!-- Portfolio Item 2 (Articles)-->
+            <div class="col-md-6 col-lg-4 mb-5">
+                <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal2">
+                    <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                        <div class="portfolio-item-caption-content text-center text-white">
+                            <i class="fas fa-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <img class="img-fluid" src="{% static 'projects/articles_icon.png' %}" alt="" />
+                </div>
+                <h3 class="text-center text-secondary mb-0">
+                    Articles
+                </h3>
+            </div>
+
+            <!-- Portfolio Item 3 (Blog)-->
+            <div class="col-md-6 col-lg-4 mb-5">
+                <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal3">
+                    <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                        <div class="portfolio-item-caption-content text-center text-white">
+                            <i class="fas fa-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <img class="img-fluid" src="{% static 'projects/blog_icon.png' %}" alt="" />
+                </div>
+                <h3 class="text-center text-secondary mb-0">
+                    Blog
+                </h3>
+            </div>
+
+            <!-- Portfolio Item 4 (IMC) -->
+            <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
+                <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal4">
+                    <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                        <div class="portfolio-item-caption-content text-center text-white">
+                            <i class="fas fa-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <img class="img-fluid" src="{% static 'projects/imc_icon.png' %}" alt="" />
+                </div>
+                <h3 class="text-center text-secondary mb-0">
+                    Influential Media Collection
+                </h3>
+            </div>
+
+            <!-- Portfolio Item 5 (YT Randomizer)-->
+            <div class="col-md-6 col-lg-4 mb-5 mb-md-0">
+                <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal5">
+                    <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                        <div class="portfolio-item-caption-content text-center text-white">
+                            <i class="fas fa-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <img class="img-fluid" src="{% static 'projects/ytr_icon.png' %}" alt="" />
+                </div>
+                <h3 class="text-center text-secondary mb-0">
+                    YouTube Randomizer
+                </h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Section-->
+<section class="page-section bg-primary text-white mb-0" id="about">
+    <div class="container">
+        <!-- About Section Heading-->
+        <h2 class="page-section-heading text-center text-uppercase text-white">About</h2>
+        <!-- Icon Divider-->
+        <div class="divider-custom divider-light">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+            <div class="divider-custom-line"></div>
+        </div>
+        <!-- About Section Content-->
+        <div class="row">
+            <div class="col-lg-4 ml-auto text-center"><p class="lead">
                 My name is Samuel Hohenshell and I've got big dreams as a software engineer. I am currently a senior at the University of Minnesota - Twin Cities College of Science and Engineering. I am studying for a B.S. in Computer Science and am on track to graduate Spring 2021. Welcome to my website!
-            </p>
-        </div>
-        <div class="col">
-            <h4>What is the purpose of this site?</h4>
-            <p>
+            </p></div>
+            <div class="col-lg-4 mr-auto text-center"><p class="lead">
                 This website started as a way to practice web development/Django and evolved into a medium to explain/show off my personal projects, write articles about things that interest me, practice JavaScript by making web apps, expand my HTML/CSS/JS knowledge, and more.
-            </p>
+            </p></div>
         </div>
     </div>
-    <div class="row">
-        <div class="col">
-            <h4>What is on this website?</h4>
-            <p>
-                Allow me to provide a brief, bulletpointed summary of each section of my site...
-                <ul>
-                    <li>Projects: An overview of all of my personal projects</li>
-                    <li>Blog: An unused (but fully functional!) framework for a blog</li>
-                    <li>IMC: An overview of my "Influential Media Collection"</li>
-                    <li>Articles: A bunch of articles written to share things I think are cool and practice/show off javascript.</li>
-                    <li>YT Randomizer: A web app for randomizing large YouTube playlists (since YouTube fails to do so)</li>
-                </ul>
-            </p>
+</section>
+
+
+<!-- Scroll to Top Button (Only visible on small and extra-small screen sizes)-->
+<div class="scroll-to-top d-lg-none position-fixed">
+    <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top"><i class="fa fa-chevron-up"></i></a>
+</div>
+
+
+<!-- Portfolio Modals-->
+<!-- Portfolio Modal 1-->
+<div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+        <div class="modal-content">
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true"><i class="fas fa-times"></i></span>
+            </button>
+            <div class="modal-body text-center">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <!-- Portfolio Modal - Title-->
+                            <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0" id="portfolioModal1Label">Projects</h2>
+                            <!-- Icon Divider-->
+                            <div class="divider-custom">
+                                <div class="divider-custom-line"></div>
+                                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                <div class="divider-custom-line"></div>
+                            </div>
+                            <!-- Portfolio Modal - Image-->
+                            <img class="img-fluid rounded mb-5" src="{% static 'projects/projects_icon.png' %}" alt="" />
+                            <!-- Portfolio Modal - Text-->
+                            <p class="mb-5">Here you can see all of my personal projects. These were all done outside of class.</p>
+                            <a class="btn btn-primary" href="{% url 'project_index' %}" role="button">See Projects</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="col">
-            <h4>Contact Info</h4>
-            <p>
-                If you would like to contact me, please feel free to email me at hohen036@umn.edu. Thanks for checking out my website <3
-            </p>
+    </div>
+</div>
+<!-- Portfolio Modal 2-->
+<div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-labelledby="portfolioModal2Label" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+        <div class="modal-content">
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true"><i class="fas fa-times"></i></span>
+            </button>
+            <div class="modal-body text-center">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <!-- Portfolio Modal - Title-->
+                            <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0" id="portfolioModal2Label">Articles</h2>
+                            <!-- Icon Divider-->
+                            <div class="divider-custom">
+                                <div class="divider-custom-line"></div>
+                                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                <div class="divider-custom-line"></div>
+                            </div>
+                            <!-- Portfolio Modal - Image-->
+                            <img class="img-fluid rounded mb-5" src="{% static 'projects/articles_icon.png' %}" alt="" />
+                            <!-- Portfolio Modal - Text-->
+                            <p class="mb-5">Here you can see a variety of articles I wrote for this website. I used these as a way to explore things I'm interested in as well as to test out JavaScript capabilities.</p>
+                            <a class="btn btn-primary" href="{% url 'articles' %}" role="button">See Articles</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Portfolio Modal 3-->
+<div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-labelledby="portfolioModal3Label" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+        <div class="modal-content">
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true"><i class="fas fa-times"></i></span>
+            </button>
+            <div class="modal-body text-center">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <!-- Portfolio Modal - Title-->
+                            <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0" id="portfolioModal3Label">Blog</h2>
+                            <!-- Icon Divider-->
+                            <div class="divider-custom">
+                                <div class="divider-custom-line"></div>
+                                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                <div class="divider-custom-line"></div>
+                            </div>
+                            <!-- Portfolio Modal - Image-->
+                            <img class="img-fluid rounded mb-5" src="{% static 'projects/blog_icon.png' %}" alt="" />
+                            <!-- Portfolio Modal - Text-->
+                            <p class="mb-5">Here you can find an unused (but fully functional) blog. I haven't used it yet, because I prefer to blog via the articles section.</p>
+                            <a class="btn btn-primary" href="{% url 'blog_index' %}" role="button">See Blog</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Portfolio Modal 4-->
+<div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-labelledby="portfolioModal4Label" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+        <div class="modal-content">
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true"><i class="fas fa-times"></i></span>
+            </button>
+            <div class="modal-body text-center">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <!-- Portfolio Modal - Title-->
+                            <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0" id="portfolioModal4Label">IMC - Influential Media Collection</h2>
+                            <!-- Icon Divider-->
+                            <div class="divider-custom">
+                                <div class="divider-custom-line"></div>
+                                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                <div class="divider-custom-line"></div>
+                            </div>
+                            <!-- Portfolio Modal - Image-->
+                            <img class="img-fluid rounded mb-5" src="{% static 'projects/imc_icon.png' %}" alt="" />
+                            <!-- Portfolio Modal - Text-->
+                            <p class="mb-5">I like to collect the most influential "media" (mostly books) in all of human history. Check out my collection here!</p>
+                            <a class="btn btn-primary" href="{% url 'imc' %}" role="button">See IMC</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Portfolio Modal 5-->
+<div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-labelledby="portfolioModal5Label" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+        <div class="modal-content">
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true"><i class="fas fa-times"></i></span>
+            </button>
+            <div class="modal-body text-center">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <!-- Portfolio Modal - Title-->
+                            <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0" id="portfolioModal5Label">YouTube Playlist Randomizer</h2>
+                            <!-- Icon Divider-->
+                            <div class="divider-custom">
+                                <div class="divider-custom-line"></div>
+                                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                <div class="divider-custom-line"></div>
+                            </div>
+                            <!-- Portfolio Modal - Image-->
+                            <img class="img-fluid rounded mb-5" src="{% static 'projects/ytr_icon.png' %}" alt="" />
+                            <!-- Portfolio Modal - Text-->
+                            <p class="mb-5">I listen to a ton of long YouTube playlists. YouTube has an issue with randomization of long playlists where it'll either struggle to randomize it or hope out of the playlist altogether. I fixed this in my YouTube Randomizer app!</p>
+                            <a class="btn btn-primary" href="{% url 'ytpr' %}" role="button">See YouTube Playlist Randomizer</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 
-<br>
-<hr>
-<br>
 
-<h1 style="text-align: center">Resume</h1>
-    <div style="text-align: center">
-        <embed src="https://docs.google.com/document/d/e/2PACX-1vS8RScQ_IJB9ZPa1AAtcJ3NDhzOouDG1HRwysS_WPjrSVqQ1sFZ0310yDgZXOehHEfA5ID02NGgmj3x/pub?embedded=true"
-           height="1060" width="830">
-    </div>
-<br>
+
+<!-- Bootstrap core JS
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+-->
+<!-- Third party plugin JS
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+-->
+<!-- Core theme JS
+<script src="js/scripts.js"></script>
+-->
 
 {% endblock %}

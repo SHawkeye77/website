@@ -2,90 +2,101 @@
 {% load static %}
 {% block page_content %}
 
-<h1>Chatbot</h1>
-<div class="row">
-    <div>
-        <img src="{% static "projects/chatbot_example.png" %}" alt="" width="50%">
+<div class="container-fluid bg-primary">
+<div class="container bg-primary text-secondary">
+    <br>
+    <h1 class="text-center">Chatbot</h1>
+    <!-- Icon Divider-->
+    <div class="divider-custom">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+        <div class="divider-custom-line"></div>
     </div>
-    <div>
-        <br>
-        <h5>About the project:</h5>
-        <p>
-            Alright so this isn't exactly a "chatbot" in the classical sense (it's no ELIZA), but it
-            does use a lot of the same principles. Essentially, text is fed in via some external, specified
-            text file. The text is then analyzed, sorted, and saved into a json file as a sort of Markov
-            Chain. This Markov Chain can then be used to generate random strings of specified lengths,
-            based on user input.
-        </p>
-
-        <h5>How to use:</h5>
-
-            <h7>Learning:</h7>
-            <p>To "learn" from a file (or user input), do the following...
-                <ul>
-                <li>Download a text file into the folder holding the chatbot project</li>
-                <li>Run the following command:<br>
-                    <code>python3 learn.py &lt;dictionary_name&gt; &lt;input_file_name&gt;</code>
-                    <ul>
-                        <li>dictionary_name : json file to store the markov chain in (defaults to dict.json)</li>
-                        <li>input_name : document to learn from (defaults to interactive mode, where you type in text
-                            rather than reading it from a file)</li>
-                    </ul>
-                    This will create or append a json file, "dictionary_name", that holds a sort of "Markov Chain" containing all the
-                    text from the text file that was fed in.
-                </li>
-                </ul>
+    <div class="row">
+        <center>
+            <img class="rounded-lg" src="{% static 'projects/chatbot_example.png' %}" alt="" width="50%">
+        </center>
+        <div>
+            <br>
+            <h5>About the project:</h5>
+            <p>
+                Alright so this isn't exactly a "chatbot" in the classical sense (it's no ELIZA), but it
+                does use a lot of the same principles. Essentially, text is fed in via some external, specified
+                text file. The text is then analyzed, sorted, and saved into a json file as a sort of Markov
+                Chain. This Markov Chain can then be used to generate random strings of specified lengths,
+                based on user input.
             </p>
 
-            <h7>Generating:</h7>
-            <p> To generate text based on a previously created Markov Chain json file, do the following:
-            <ul>
-                <li>Ensure the json dictionary you will use is in the same folder holding the chatbot project</li>
-                <li>Run the following command:<br>
-                    <code>python3 generate.py &lt;n&gt; &lt;d&gt;</code>
+            <hr>
+            <h5>How to use:</h5>
+
+                <h7>Learning:</h7>
+                <p>To "learn" from a file (or user input), do the following...
                     <ul>
-                        <li>n : Number of words to generate for our output string</li>
-                        <li>d : Dictionary name holding the associated json file with the Markov Chain</li>
+                    <li>Download a text file into the folder holding the chatbot project</li>
+                    <li>Run the following command:<br>
+                        <code class="text-danger">python3 learn.py &lt;dictionary_name&gt; &lt;input_file_name&gt;</code>
+                        <ul>
+                            <li>dictionary_name : json file to store the markov chain in (defaults to dict.json)</li>
+                            <li>input_name : document to learn from (defaults to interactive mode, where you type in text
+                                rather than reading it from a file)</li>
+                        </ul>
+                        This will create or append a json file, "dictionary_name", that holds a sort of "Markov Chain" containing all the
+                        text from the text file that was fed in.
+                    </li>
                     </ul>
-                    This will generate a random string of "n" words, "speaking" like the text associated with the
-                    given json dictionary file.
+                </p>
+
+                <h7>Generating:</h7>
+                <p> To generate text based on a previously created Markov Chain json file, do the following:
+                <ul>
+                    <li>Ensure the json dictionary you will use is in the same folder holding the chatbot project</li>
+                    <li>Run the following command:<br>
+                        <code class="text-danger">python3 generate.py &lt;n&gt; &lt;d&gt;</code>
+                        <ul>
+                            <li>n : Number of words to generate for our output string</li>
+                            <li>d : Dictionary name holding the associated json file with the Markov Chain</li>
+                        </ul>
+                        This will generate a random string of "n" words, "speaking" like the text associated with the
+                        given json dictionary file.
+                    </li>
+                </ul>
+                </p>
+
+            <hr>
+            <h5>Improvements:</h5>
+            This project is more like a baseline to a larger project since it can really be <i>vastly</i> improved on. Here
+            are just a few of the ways I have thought on how to improve this.
+            <ul>
+                <li>TweetBot: On the command line, the user could give someone's Twitter handle. Then, the tool would use
+                    Twitters api to create a text file consisting of the body of all of that user's tweets. Then, that
+                    file would be fed in to the "generate" function of the project, where it would create a random tweet
+                    (of specified and appropriate length) that is built based off the words used in the given person's actual tweets.</li>
+                <li>Word Types: If I implemented this I'd like to study a bit of linguistics first. Basically, each word could be tagged as
+                    one of the eight English parts of speech. When generating sentences, we could have sentence "templates",
+                    (e.g. Start with pronoun, follow with a verb, and end with an adverb), we could have a certain number
+                    of each of the parts of speech required per sentence, we could ensure each has at least one verb
+                    and one noun (to make it a legitimate english sentence), or do a mix of any number of these.</li>
+                <li>Sentence Beginners/Enders: I think this could be an easy way to make more coherent and realistic sentences.
+                    When learning from text, the algorithm could mark words if they're first or last in a sentence. Then,
+                    when generating sentences, normalize the chance of a first or last word in a generated sentence proportional to
+                    how often it began/concluded sentences in the text that it learned from.</li>
+            </ul>
+
+            <hr>
+            <h5>Source Code:</h5>
+            <ul>
+                <li>
+                    <a class="text-danger" href="https://github.com/SHawkeye77/chatbot">You can find all the code here.</a>
+                </li>
+                <li>
+                    Note: Most of the idea for this project came from <a class="text-danger" href="https://www.youtube.com/watch?v=L97yQMT0jn8">this video</a>.
+                    Feel free to give it a watch and check out the channel, it's pretty awesome!
                 </li>
             </ul>
-            </p>
 
-        <h5>Improvements:</h5>
-        This project is more like a baseline to a larger project since it can really be <i>vastly</i> improved on. Here
-        are just a few of the ways I have thought on how to improve this.
-        <ul>
-            <li>TweetBot: On the command line, the user could give someone's Twitter handle. Then, the tool would use
-                Twitters api to create a text file consisting of the body of all of that user's tweets. Then, that
-                file would be fed in to the "generate" function of the project, where it would create a random tweet
-                (of specified and appropriate length) that is built based off the words used in the given person's actual tweets.</li>
-            <li>Word Types: If I implemented this I'd like to study a bit of linguistics first. Basically, each word could be tagged as
-                one of the eight English parts of speech. When generating sentences, we could have sentence "templates",
-                (e.g. Start with pronoun, follow with a verb, and end with an adverb), we could have a certain number
-                of each of the parts of speech required per sentence, we could ensure each has at least one verb
-                and one noun (to make it a legitimate english sentence), or do a mix of any number of these.</li>
-            <li>Sentence Beginners/Enders: I think this could be an easy way to make more coherent and realistic sentences.
-                When learning from text, the algorithm could mark words if they're first or last in a sentence. Then,
-                when generating sentences, normalize the chance of a first or last word in a generated sentence proportional to
-                how often it began/concluded sentences in the text that it learned from.</li>
-        </ul>
-
-        <br>
-        <h5>Source Code:</h5>
-        <ul>
-            <li>
-                <a href="https://github.com/SHawkeye77/chatbot">You can find all the code here.</a>
-            </li>
-            <li>
-                Note: Most of the idea for this project came from <a href="https://www.youtube.com/watch?v=L97yQMT0jn8">this video</a>.
-                Feel free to give it a watch and check out the channel, it's pretty awesome!
-            </li>
-        </ul>
-
-
+        </div>
     </div>
 </div>
-
+</div>
 {% endblock %}

@@ -2,30 +2,36 @@
 {% load static %}
 {% block page_content %}
 
-<h1>STJ</h1>
-<div class="row">
-    <div>
-        <img src="{% static "projects/stj.png" %}" alt="" width="50%">
+<div class="container-fluid bg-primary">
+<div class="container bg-primary text-secondary">
+    <br>
+    <h1 class="text-center">STJ</h1>
+    <!-- Icon Divider-->
+    <div class="divider-custom">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+        <div class="divider-custom-line"></div>
     </div>
-    <div>
-        <br>
-        <h5>About the project:</h5>
-        <p>
-            STJ stands for "Sadness Trance Journal". Sometimes when you're sad, be it a breakup, a job loss, bad grades, etc.,
-            it helps to just take a minute to feel sad and think about your worries before moving on. When I felt like this once,
-            instead of doing my homework like I should have, I decided to take the morning and code this up.
-        </p>
-        <p>
-            The program pulls up a sad/nostalgic image (from an internal library, modify if you'd like) and a trance-y song (again from an internal library,
-            modify if you'd like) to accompany it. You can type in whatever you'd like to get off your mind and then press enter to clear the screen. Hitting
-            "tab" will swap to a new photo and a new song. This is a pretty weird project but I decided to include it anyway LOL.
-        </p>
-        <p>
-            <a href="https://github.com/SHawkeye77/stj">You can find all the code here.</a>
-        </p>
+    <div class="row">
+        <center>
+            <img src="{% static 'projects/stj.png' %}" alt="" width="50%">
+        </center>
+        <div>
+            <br>
+            <h5>About the project:</h5>
+            <p>
+                STJ stands for "Sadness Trance Journal". Sometimes when you're sad, be it a breakup, a job loss, bad grades, etc., it helps to just take a minute to feel sad and think about your worries before moving on. When I felt like this once, instead of doing my homework like I should have, I decided to take the morning and code this up.
+            </p>
+            <p>
+                The program pulls up a sad/nostalgic image (from an internal library, modify if you'd like) and a trance-y song (again from an internal library, modify if you'd like) to accompany it. You can type in whatever you'd like to get off your mind and then press enter to clear the screen. Hitting "tab" will swap to a new photo and a new song. This is a pretty weird project but I decided to include it anyway LOL.
+            </p>
+            <hr>
+            <p>
+                <a class="text-danger" href="https://github.com/SHawkeye77/stj">You can find all the code here.</a>
+            </p>
+        </div>
     </div>
 </div>
-
-
+</div>
 
 {% endblock %}

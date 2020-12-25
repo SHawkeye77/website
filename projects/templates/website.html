@@ -2,20 +2,30 @@
 {% load static %}
 {% block page_content %}
 
-<h1>Website</h1>
-<div class="row">
-    <div>
-        <img src="{% static "projects/website.png" %}" alt="" width="50%">
+<div class="container-fluid bg-primary">
+<div class="container bg-primary text-secondary">
+    <br>
+    <h1 class="text-center">Website</h1>
+    <!-- Icon Divider-->
+    <div class="divider-custom">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+        <div class="divider-custom-line"></div>
     </div>
     <div>
-        <br>
+        <center>
+            <img class="rounded" src="{% static 'projects/website.png' %}" alt="" width="50%">
+        </center>
+    </div>
+    <hr>
+    <div>
         <h5>About the project:</h5>
         <p>
-            In order to practice coding, django, html, python, and git (as well as for fun :)) I decided to make this website!
-            It utilizes django and bootstrap. It is all hosted on GitHub but it is private for security reasons.
+            In order to practice coding, django, html, python, and git (as well as for fun :)) I decided to make this website! It utilizes django and bootstrap. It is all hosted on GitHub but it is private for security reasons.
         </p>
     </div>
+    <br>
 </div>
-
+</div>
 
 {% endblock %}

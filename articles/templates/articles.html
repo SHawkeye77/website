@@ -1,92 +1,105 @@
 {% extends "base.html" %}
 {% block page_content %}
-<div class="col-md-10 offset-md-1">
-    <h1><center>Articles</center></h1>
-    <h5>
-        To showcase some of my interests as well as practice more html, django, and bootstrap, I've written a couple of
-        articles on things I enjoy. Feel free to browse! Note: The more well-done articles are near the end...
-    </h5>
-    <div class="card" style="width: 55rem;">
-        <div class="card-body">
-            <h5 class="card-title"> <a href="favorite_unix_commands">Favorite Unix Commands</a></h5>
-            <p class="card-text">
-                Power to the people! Unix is so trusting and empowering that it can sometimes be
-                dangerous... Here are a few of my favorite commands.
-            </p>
+<div class="container-fluid bg-primary">
+<div class="container bg-primary text-white">
+    <div class="col-md-10 offset-md-1">
+        <br>
+        <h1 class="text-center text-secondary">Articles</h1>
+        <!-- Icon Divider-->
+        <div class="divider-custom">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+            <div class="divider-custom-line"></div>
         </div>
-    </div>
-    <div class="card" style="width: 55rem;">
-        <div class="card-body">
-            <h5 class="card-title"> <a href="favorite_physics_equations">Favorite Physics Equations</a></h5>
-            <p class="card-text">
-                A few of the math/physics equations I find the most cool or interesting
-            </p>
+        <h5 class="text-secondary">
+            To showcase some of my interests as well as practice more html, django, javascript, css, and bootstrap, I've written a couple of articles on things I enjoy. Feel free to browse!
+        </h5>
+        <div class="card bg-secondary">
+            <div class="card-body">
+                <h5 class="card-title">
+                    <a href="rokos_baselisk">How to Doom Someone to Eternal Torment</a>
+                </h5>
+                <p class="card-text">
+                    My explanation and analysis of "Roko's Baselisk" - a potentially dangerous thought experiment
+                </p>
+            </div>
         </div>
-    </div>
-    <div class="card" style="width: 55rem;">
-        <div class="card-body">
-            <h5 class="card-title"> <a href="favorite_star_wars_songs">Favorite Star Wars Songs</a></h5>
-            <p class="card-text">
-                Star Wars and Star Wars music has shaped my childhood and early adulthood. I've compiled a list of the
-                top songs.
-            </p>
+        <br>
+        <div class="card bg-secondary">
+            <div class="card-body">
+                <h5 class="card-title">
+                    <a href="aurebesh_translator">Aurebesh Translator</a>
+                </h5>
+                <p class="card-text">
+                    Translate English to Galactic Aurebesh
+                </p>
+            </div>
         </div>
-    </div>
-    <div class="card" style="width: 55rem;">
-        <div class="card-body">
-            <h5 class="card-title">
-                <a href="nintendo_franchises_ranked_by_soundtrack">Nintendo Franchises Ranked By Soundtrack</a>
-            </h5>
-            <p class="card-text">
-                My most listened to "genre" of music by far is video game music, with the most common game development
-                company I listen to being Nintendo. Nintendo has some incredible music franchises - here is my ranking.
-            </p>
+        <br>
+        <div class="card bg-secondary">
+            <div class="card-body">
+                <h5 class="card-title">
+                    <a href="dangers_of_phishing">The Dangers of Phishing</a>
+                </h5>
+                <p class="card-text">
+                    My warning about and proof of how easy it is to phish. Note: this page had to be modified because 
+                    it originally got my website shut down...
+                </p>
+            </div>
         </div>
-    </div>
-    <div class="card" style="width: 55rem;">
-        <div class="card-body">
-            <h5 class="card-title">
-                <a href="an_analysis_of_human_decision_making">An Analysis of Human Decision Making</a>
-            </h5>
-            <p class="card-text">
-                I often worry about decision making. With that, I've thought a lot about what it means to make a
-                decision and how I actually go about it. This is an odd article, but I think about it a lot so I
-                wanted to write a blog-style post on it.
-            </p>
+        <br>
+        <div class="card bg-secondary">
+            <div class="card-body">
+                <h5 class="card-title"> <a href="favorite_unix_commands">Favorite Unix Commands</a></h5>
+                <p class="card-text">
+                    Power to the people! Unix is so trusting and empowering that it can sometimes be
+                    dangerous... Here are a few of my favorite commands.
+                </p>
+            </div>
         </div>
-    </div>
-    <div class="card" style="width: 55rem;">
-        <div class="card-body">
-            <h5 class="card-title">
-                <a href="aurebesh_translator">Aurebesh Translator</a>
-            </h5>
-            <p class="card-text">
-                Translate English to Galactic Aurebesh
-            </p>
+        <br>
+        <div class="card bg-secondary">
+            <div class="card-body">
+                <h5 class="card-title"> <a href="favorite_physics_equations">Favorite Physics Equations</a></h5>
+                <p class="card-text">
+                    A few of the math/physics equations I find the most cool or interesting
+                </p>
+            </div>
         </div>
-    </div>
-    <div class="card" style="width: 55rem;">
-        <div class="card-body">
-            <h5 class="card-title">
-                <a href="rokos_baselisk">How to Doom Someone to Eternal Torment</a>
-            </h5>
-            <p class="card-text">
-                My explanation and analysis of "Roko's Baselisk" - a potentially dangerous thought experiment
-            </p>
+        <br>
+        <div class="card bg-secondary">
+            <div class="card-body">
+                <h5 class="card-title"> <a href="favorite_star_wars_songs">Favorite Star Wars Songs</a></h5>
+                <p class="card-text">
+                    Star Wars and Star Wars music has shaped my childhood and early adulthood. I've compiled a list of the top songs.
+                </p>
+            </div>
         </div>
-    </div>
-    <div class="card" style="width: 55rem;">
-        <div class="card-body">
-            <h5 class="card-title">
-                <a href="dangers_of_phishing">The Dangers of Phishing</a>
-            </h5>
-            <p class="card-text">
-                My warning about and proof of how easy it is to phish. Note: this page had to be modified because 
-                it originally got my website shut down...
-            </p>
+        <br>
+        <div class="card bg-secondary">
+            <div class="card-body">
+                <h5 class="card-title">
+                    <a href="nintendo_franchises_ranked_by_soundtrack">Nintendo Franchises Ranked By Soundtrack</a>
+                </h5>
+                <p class="card-text">
+                    My most listened to "genre" of music by far is video game music, with the most common game development company I listen to being Nintendo. Nintendo has some incredible music franchises - here is my ranking.
+                </p>
+            </div>
         </div>
+        <br>
+        <div class="card bg-secondary">
+            <div class="card-body">
+                <h5 class="card-title">
+                    <a href="an_analysis_of_human_decision_making">An Analysis of Human Decision Making</a>
+                </h5>
+                <p class="card-text">
+                    I often worry about decision making. With that, I've thought a lot about what it means to make a decision and how I actually go about it. This is an odd article, but I think about it a lot so I wanted to write a blog-style post on it.
+                </p>
+            </div>
+        </div>
+        <br>
     </div>
-
+</div>
 </div>
 {% endblock %}
 

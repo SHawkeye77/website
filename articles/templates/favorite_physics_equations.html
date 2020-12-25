@@ -1,6 +1,22 @@
 {% extends "base.html" %}
 {% block page_content %}
-    <h1>Favorite Physics Equations</h1>
+<!-- MathJax stuff -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<div class="container-fluid bg-primary">
+<div class="container bg-primary text-secondary">
+    <br>
+    <h1 class="text-center">Favorite Physics Equations</h1>
 
     <p>Here are some of my favorite equations (no particular order).</p>
 
@@ -25,6 +41,7 @@
 
     <p>2) Newton's Second Law
         $$F = m · a$$
+    </p>
     <p>
         What it is/why I love it: Calculates net force on an object. When I studied physics, my professors would relate everything
         back to this equation. No matter how complicated, it seemed like every equation could be related in some way to this simple
@@ -106,7 +123,7 @@
         <li>Maxwell's equations</li>
         <li>Fundamental theorem of calculus</li>
     </ul>
-
-
+    <br>
+</div>
 </div>
 {% endblock %}
