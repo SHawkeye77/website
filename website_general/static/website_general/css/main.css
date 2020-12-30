@@ -10242,12 +10242,12 @@ form .row:first-child .floating-label-form-group {
 /* Everything below was added by me */
 @font-face {
     font-family: 'aurebeshregular';
-    src: url('aurebesh-webfont.woff2') format('woff2'),
-         url('aurebesh-webfont.woff') format('woff');
+    src: url('../fonts/aurebesh-webfont.woff2') format('woff2'),
+         url('../fonts/aurebesh-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
-aurabesh_large {
+aurebesh_large {
     font-family: aurebeshregular;
     font-size: 400%;
 }

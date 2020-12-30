@@ -2,6 +2,9 @@
 {% load static %}
 {% block page_content %}
 
+<!-- Loading articles script for the font change at the end of the article -->
+<script src="{% static 'articles/js/articles_scripts.js' %}"></script>
+
 <div class="container-fluid bg-primary">
 <div class="container bg-primary text-secondary">
     <br>
@@ -14,7 +17,7 @@
         <div class="row">
             <div class="col">
                 <figure class="figure">
-                    <img src="{% static 'projects/tractor_beam_aurebesh.png' %}" class="figure-img img-fluid rounded">
+                    <img src="{% static 'articles/images/tractor_beam_aurebesh.png' %}" class="figure-img img-fluid rounded">
                     <figcaption class="figure-caption text-secondary">
                         Tractor beam control from Episode IV. The top version shows the original English while the bottom shows the translation to Aurebesh, which was added in later releases of the movie.
                     </figcaption>
@@ -22,7 +25,7 @@
             </div>
             <div class="col">
                 <figure class="figure">
-                    <img src="{% static 'projects/rey_aurebesh.jpg' %}" class="figure-img img-fluid rounded">
+                    <img src="{% static 'articles/images/rey_aurebesh.jpg' %}" class="figure-img img-fluid rounded">
                     <br><br>
                     <figcaption class="figure-caption text-secondary">
                         The helmet Rey wears at her "home" in Episode VII has Aurebesh inscription on the side.
@@ -33,7 +36,7 @@
         <div class="row">
             <div class="col">
                 <figure class="figure">
-                    <img src="{% static 'projects/galaxys_edge_aurebesh.jpg' %}" class="figure-img img-fluid rounded">
+                    <img src="{% static 'articles/images/galaxys_edge_aurebesh.jpg' %}" class="figure-img img-fluid rounded">
                     <figcaption class="figure-caption text-secondary">
                         Disney World's Star Wars theme park "Galaxy's Edge" has Aurebesh signs scattered about the park.
                     </figcaption>
@@ -41,7 +44,7 @@
             </div>
             <div class="col">
                 <figure class="figure">
-                    <img src="{% static 'projects/clone_wars_aurebesh.png' %}" class="figure-img img-fluid rounded">
+                    <img src="{% static 'articles/images/clone_wars_aurebesh.png' %}" class="figure-img img-fluid rounded">
                     <figcaption class="figure-caption text-secondary">
                         Aurebesh is heavily used in Star Wars animated series including all seasons of Clone Wars.
                     </figcaption>
@@ -53,7 +56,7 @@
             The English translation of Aurebesh is almost completely a one-to-one translation of English to Aurebesh letters, as seen in this diagram:
         </p>
         <center>
-            <img src="{% static 'projects/aurebesh.png' %}" class="figure-img img-fluid rounded" width="50%">
+            <img src="{% static 'articles/images/aurebesh.png' %}" class="figure-img img-fluid rounded" width="50%">
         </center>
 
         <br><br>
@@ -69,18 +72,11 @@
         <input class="bg-secondary text-primary" type="button" value="Translate English to Aurebesh Script" onclick="calculateAurebesh()">
         <br><br>
 
-        <aurabesh_large id="outputP"></aurabesh_large>
+        <aurebesh_large id="outputP"></aurebesh_large>
     </p>
     <br>
 </div>
 </div>
 
-<script type="text/javascript">
-    function calculateAurebesh() {
-        var text = document.getElementById('english_text').value;
-        var display=document.getElementById('outputP');
-        display.innerHTML=text;
-    }
-</script>
 
 {% endblock %}

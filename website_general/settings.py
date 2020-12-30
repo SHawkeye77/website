@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "website_general",
     "projects",
     "blog",
     "imc",
@@ -128,7 +129,7 @@ USE_L10N = True
 
 USE_TZ = True
 
-# Media stuff (for image uploads)
+# Media stuff (for image uploads) (I don't think I even us this)
 MEDIA_URL = "/media/"
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 

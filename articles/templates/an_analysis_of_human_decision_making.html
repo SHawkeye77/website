@@ -1,5 +1,10 @@
 {% extends "base.html" %}
 {% block page_content %}
+{% load static %}
+
+<!-- Loading articles script for the calculation at the end of the article -->
+<script src="{% static 'articles/js/articles_scripts.js' %}"></script>
+
 <div class="container-fluid bg-primary">
 <div class="container bg-primary text-secondary">
     <br>
@@ -223,31 +228,6 @@
 
         <hr>
         <div id="outputDiv" style="height: 50px; width: 100%;"></div>
-
-        <script type="text/javascript">
-            function calculateNH() {
-                var IL = parseFloat(document.getElementById('IL').value);
-                var p  = parseFloat(document.getElementById('p').value);
-                var ER = parseFloat(document.getElementById('ER').value);
-                var NH = IL + p * ER;
-
-                var display=document.getElementById('outputDiv');
-                
-                if (NH > 0) {
-                    display.innerHTML="NH Value: " + NH;
-                    display.append("... \nDo this. It will increase your net happiness.");
-                } else
-                if (NH == 0) {
-                    display.innerHTML="NH Value: " + NH;
-                    display.append("... \nIt does not matter what you do in this situation.");
-                }
-                else {
-                    display.innerHTML="NH Value: " + NH;
-                    display.append("... \nDo not do this. It will decrease your net happiness.");
-                }
-            }
-
-        </script>
 
 </div>
 </div>

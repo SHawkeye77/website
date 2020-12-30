@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 {% load static %}
 {% block page_content %}
+
+
 <div class="container-fluid bg-primary">
 <div class="container bg-primary text-secondary">
     <br>
@@ -20,7 +22,7 @@
         </div>
         <div class="col-6 col-md-4">
             <figure class="figure">
-                <img src="{% static 'basilisk.jpg' %}" class="figure-img img-fluid rounded">
+                <img src="{% static 'articles/images/basilisk.jpg' %}" class="figure-img img-fluid rounded">
                 <figcaption class="figure-caption text-secondary">
                     <center>Marcus Gheeraerts I - The Basilisk and the Weasel (Edited)</center>
                 </figcaption>
@@ -41,7 +43,7 @@
     <div class="row">
         <div class="col-6 col-md-4">
             <figure class="figure">
-               <img src="{% static 'nine_circles_of_hell_botticelli.jpeg' %}" class="figure-img img-fluid rounded">
+               <img src="{% static 'articles/images/nine_circles_of_hell_botticelli.jpeg' %}" class="figure-img img-fluid rounded">
                <figcaption class="figure-caption text-secondary">
                    <center>Sandro Botticelli - The Map of Hell</center>
                </figcaption>
@@ -101,6 +103,7 @@
     </div>
     <br>
 
+    <!-- Can NOT hold this in articles_scripts.js because it requires different version of jquery -->
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
     <script type="text/javascript">
@@ -110,9 +113,9 @@
     </script>
     <script type="text/javascript">
         var myform = $("form#myform");
-        myform.submit(function(event){
-	        event.preventDefault();
-	        var params = myform.serializeArray().reduce(function(obj, item) {
+            myform.submit(function(event){
+            event.preventDefault();
+            var params = myform.serializeArray().reduce(function(obj, item) {
                 obj[item.name] = item.value;
                 return obj;
             }, {});
@@ -122,18 +125,16 @@
             var template_id = "rokos_baselisk_email_doomer";
             myform.find("button").text("Sending...");
             emailjs.send(service_id, template_id, params)
-  	        .then(function(){
-                alert("Sent!");
-                myform.find("button").text("Send");
-            }, function(err) {
-                alert("Send email failed!\r\n Response:\n " + JSON.stringify(err));
-                myform.find("button").text("Send");
+                .then(function(){
+                    alert("Sent!");
+                    myform.find("button").text("Send");
+                }, function(err) {
+                    alert("Send email failed!\r\n Response:\n " + JSON.stringify(err));
+                    myform.find("button").text("Send");
             });
-
             return false;
         });
     </script>
-
 </div>
 </div>
 {% endblock %}
