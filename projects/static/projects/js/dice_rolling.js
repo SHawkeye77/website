@@ -97,6 +97,7 @@ function updateScreen(nEachOutcome) {
     document.getElementById("rollResult").innerHTML = "";  
 
     // Adding each outcome (without cancelling)
+    // Note: Couldn't figure out how to do this with django paths, so I had to use absolute paths.
     var none = true;
     for (var i=0; i<nEachOutcome["triumph"]; i++) {
         $("#rollResult").append("<img src=/static/projects/images/dice/triumph.png/>");
