@@ -103,27 +103,27 @@ function updateScreen(nEachOutcome) {
         none = false;
     }
     for (var i=0; i<nEachOutcome["success"]; i++) {
-        $("#rollResult").append("<img src=/static/projects/images/dice/success.png/>");
+        $("#rollResult").append("<img src=/static/projects/images/dice/success.png>");
         none = false;
     }
     for (var i=0; i<nEachOutcome["advantage"]; i++) {
-        $("#rollResult").append("<img src=/static/projects/images/dice/advantage.png/>");
+        $("#rollResult").append("<img src=/static/projects/images/dice/advantage.png>");
         none = false;
     }
     for (var i=0; i<nEachOutcome["failure"]; i++) {
-        $("#rollResult").append("<img src=/static/projects/images/dice/failure.png/>");
+        $("#rollResult").append("<img src=/static/projects/images/dice/failure.png>");
         none = false;
     }
     for (var i=0; i<nEachOutcome["threat"]; i++) {
-        $("#rollResult").append("<img src=/static/projects/images/dice/threat.png/>");
+        $("#rollResult").append("<img src=/static/projects/images/dice/threat.png>");
         none = false;
     }
     for (var i=0; i<nEachOutcome["light_side"]; i++) {
-        $("#rollResult").append("<img src=/static/projects/images/dice/light_side.png/>");
+        $("#rollResult").append("<img src=/static/projects/images/dice/light_side.png>");
         none = false;
     }
     for (var i=0; i<nEachOutcome["dark_side"]; i++) {
-        $("#rollResult").append("<img src=/static/projects/images/dice/dark_side.png/>");
+        $("#rollResult").append("<img src=/static/projects/images/dice/dark_side.png>");
         none = false;
     }
 
