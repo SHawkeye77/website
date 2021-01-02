@@ -17,5 +17,6 @@ urlpatterns = [
     path("encrypt_word/", views.encrypt_word, name="encrypt_word"),
     path("cgol/", views.cgol, name="cgol"),
     path("chatbot/", views.chatbot, name="chatbot"),
+    path("swrpg_dice/", views.swrpg_dice, name="swrpg+dice"),
 ]
 

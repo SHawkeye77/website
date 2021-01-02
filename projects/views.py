@@ -38,3 +38,7 @@ def cgol(request):
 # View chatbot page
 def chatbot(request):
     return render(request, "chatbot.html", {})
+
+# View SWRPG Dice Roller Page
+def swrpg_dice(request):
+    return render(request, "swrpg_dice.html", {})

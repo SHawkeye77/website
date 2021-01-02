@@ -1,0 +1,230 @@
+{% extends "base.html" %}
+{% load static %}
+{% block page_content %}
+
+<!-- CSS For Custom Button -->
+<link href="{% static 'projects/css/projects_css.css' %}" rel="stylesheet" />
+<!-- Loading my script for YouTube playlist randomization -->
+<script src="{% static 'projects/js/dice_rolling.js' %}"></script>
+
+<div class="container-fluid bg-primary">
+<div class="container bg-primary text-secondary">
+    <br>
+    <h1 class="text-center">Star Wars RPG Online Dice-Roller</h1>
+    <center><aurebesh>Star Wars RPG Online Dice-Roller</aurebesh></center>
+    <hr>
+    <br>
+
+    <div class="row">
+        <!-- Collecting input in this column -->
+        <div class="col">
+            <!-- Proficiency Die -->
+            <div class="row">
+                <div class="col" style="display:flex;align-items:center;justify-content:center;">
+                    <img src="{% static 'projects/images/dice/proficiency.png' %}"/>
+                </div>
+                <div class="col" style="display:flex;align-items:center;justify-content:center;">
+                    Proficiency
+                </div>
+                <div class="col" style="display:flex;align-items:center;justify-content:center;">
+                    <select id="n_proficiency" style="max-width: 100%;">
+                        <option value="0" selected>0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                    </select>
+                </div>
+            </div>
+            <!-- Ability Die -->
+            <div class="row">
+                <div class="col" style="display:flex;align-items:center;justify-content:center;">
+                    <img src="{% static 'projects/images/dice/ability.png' %}"/>
+                </div>
+                <div class="col" style="display:flex;align-items:center;justify-content:center;">
+                    Ability
+                </div>
+                <div class="col" style="display:flex;align-items:center;justify-content:center;">
+                    <select id="n_ability" style="max-width: 100%;">
+                        <option value="0" selected>0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                    </select>
+                </div>
+            </div>
+            <!-- Boost Die -->
+            <div class="row">
+                <div class="col" style="display:flex;align-items:center;justify-content:center;">
+                    <img src="{% static 'projects/images/dice/boost.png' %}"/>
+                </div>
+                <div class="col" style="display:flex;align-items:center;justify-content:center;">
+                    Boost
+                </div>
+                <div class="col" style="display:flex;align-items:center;justify-content:center;">
+                    <select id="n_boost" style="max-width: 100%;">
+                        <option value="0" selected>0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                    </select>
+                </div>
+            </div>
+            <!-- Challenge Die -->
+            <div class="row">
+                <div class="col" style="display:flex;align-items:center;justify-content:center;">
+                    <img src="{% static 'projects/images/dice/challenge.png' %}"/>
+                </div>
+                <div class="col" style="display:flex;align-items:center;justify-content:center;">
+                    Challenge
+                </div>
+                <div class="col" style="display:flex;align-items:center;justify-content:center;">
+                    <select id="n_challenge" style="max-width: 100%;">
+                        <option value="0" selected>0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                    </select>
+                </div>
+            </div>
+            <!-- Difficulty Die -->
+            <div class="row">
+                <div class="col" style="display:flex;align-items:center;justify-content:center;">
+                    <img src="{% static 'projects/images/dice/difficulty.png' %}"/>
+                </div>
+                <div class="col" style="display:flex;align-items:center;justify-content:center;">
+                    Difficulty
+                </div>
+                <div class="col" style="display:flex;align-items:center;justify-content:center;">
+                    <select id="n_difficulty" style="max-width: 100%;">
+                        <option value="0" selected>0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                    </select>
+                </div>
+            </div>
+            <!-- Setback Die -->
+            <div class="row">
+                <div class="col" style="display:flex;align-items:center;justify-content:center;">
+                    <img src="{% static 'projects/images/dice/setback.png' %}"/>
+                </div>
+                <div class="col" style="display:flex;align-items:center;justify-content:center;">
+                    Setback
+                </div>
+                <div class="col" style="display:flex;align-items:center;justify-content:center;">
+                    <select id="n_setback" style="max-width: 100%;">
+                        <option value="0" selected>0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                    </select>
+                </div>
+            </div>
+            <!-- Force Die -->
+            <div class="row">
+                <div class="col" style="display:flex;align-items:center;justify-content:center;">
+                    <img src="{% static 'projects/images/dice/force.png' %}"/>
+                </div>
+                <div class="col" style="display:flex;align-items:center;justify-content:center;">
+                    Force
+                </div>
+                <div class="col" style="display:flex;align-items:center;justify-content:center;">
+                    <select id="n_force" style="max-width: 100%;">
+                        <option value="0" selected>0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                    </select>
+                </div>
+            </div>
+            <br>
+        </div>
+
+        <!-- Displays results -->
+        <div class="col">
+            <hr>
+            <div class="text-center">
+                <!-- Custom button icon I got from https://webdeasy.de/en/top-css-buttons-en/ -->
+                <button class="glow-on-hover" type="button" onclick="resetAllSelects()">Reset Dice/Results</button>
+            </div>
+            <hr>
+            <div class="text-center">
+                <!-- Custom button icon I got from https://webdeasy.de/en/top-css-buttons-en/ -->
+                <button class="glow-on-hover" type="button" onclick="onRollDice()">Roll Dice</button>
+            </div>
+            <hr>
+            
+            <h2>Roll Result</h2>
+
+            <div id="rollResult">
+                
+            </div>
+
+
+
+        </div>
+    </div>
+
+    <hr>
+    <h2>About/Notes</h2>
+    <div>
+        <ul>
+            <li>These dice are for the Star Wars tabletop role-playing game by Fantasy Flight Games. Check it out <a class="text-danger" href="https://www.fantasyflightgames.com/en/starwarsrpg/">here</a>!
+            <li>The (psueudo-)randomness for this application is generated by <a class="text-danger" href="https://www.random.org/">random.org</a>'s API, which generates randomness through atmospheric noise.</li>
+            <li>My application calls random.org's API to generate random integers like so: given a user request for <i>n</i> dice rolls, I request <i>n</i> random integers from random.org, each in the range of 1 and 24, inclusive. This is because the three possible dice sizes are 6, 8, and 12 sides, which have a least common multiple of 24. This way, I can just use the modulus operator to generate random numbers within any of the three dice size ranges. With this approach, I can minimize the requested integers' range while only needing one API call for each set of dice rolls.</li>
+            <li>Note: This does <i>not</i> work on Internet Explorer (IE). However, it works on all other updated, modern browsers (including mobile). This is due to my use of the fetch() JavaScript function for the API call.</li> 
+        </ul>
+    </div>
+    <br>
+
+
+
+
+
+
+</div>
+</div>
+
+{% endblock %}
