@@ -18,5 +18,6 @@ urlpatterns = [
     path("cgol/", views.cgol, name="cgol"),
     path("chatbot/", views.chatbot, name="chatbot"),
     path("swrpg_dice/", views.swrpg_dice, name="swrpg+dice"),
+    path("voice_emulator/", views.voice_emulator, name="voice_emulator"),
 ]
 

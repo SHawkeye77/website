@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% load static %}
+{% block page_content %}
+
+<div class="container-fluid bg-primary">
+<div class="container bg-primary text-secondary">
+    <br>
+    <h1 class="text-center">Voice Emulator</h1>
+    <!-- Icon Divider-->
+    <div class="divider-custom">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+        <div class="divider-custom-line"></div>
+    </div>
+    <h3 class="text-center">Example (My Voice)</h3>
+    <div class="row text-center">
+        <div class="col">
+            <h5>Input</h5>
+            <kbd> 
+                > Welcome to my website! I hope you enjoy it.
+            </kbd>
+        </div>
+        <div class="col">
+            <h5>Output</h5>
+            <div>
+                <audio controls>
+                    <source src="{% static 'projects/other/ve_example.mp3' %}" type="audio/mpeg">
+                    <!-- Only prints the following if the user's browser doesn't support audio -->
+                    Your browser does not support the audio element.
+                </audio> 
+            </div>
+        </div>
+    </div>
+    <br>
+    <h3>How it Works & Dependencies</h3>
+    <div style="margin-left: 40px;">
+        The English language can be narrowed down to just 39 basic sounds, called "phonemes". Each phoneme has a specific character representation, and the set of representations is called the ARPABET, which is described in more detail <a class="text-danger" href="http://www.speech.cs.cmu.edu/cgi-bin/cmudict">here</a>. While these are the only sounds, they can each be pronounced in slightly different ways by varying syllable stress, cadence, etc. All these slight modifications make it so that pronunciation is a little more nuanced than just stringing together the phoneme makeup of a word. This project was promped by my curiosity as to how accurate a text-to-speech bot would be given just one pronunciation of each of the 39 phonemes. With such a simple setup, a text-to-speech bot can be easily made to mimic almost anyone, as long as they've been recorded saying words with each of the 39 phonemes at least once.
+        <br>
+        <br>
+        At a high level, this is what my program does: 
+        <ol>
+            <li>Gathers user input</li>
+            <li>Splits user input into individual words</li>
+            <li>Stores the ARPABET pronunciation for each word using the "pronouncing" package</li>
+            <li>Plays all phonemes in order, accounting for punctuation with pauses</li>
+        </ol>
+        
+        Other than the source code, which you can find <a class="text-danger" href="https://github.com/SHawkeye77/voice_emulator">here</a>, there are a few external libraries and additional setup you need to do for this project. 
+        <ul>
+            <li><samp>pronouncing</samp>: A Python library that returns the ARPABET pronunciations of words. You can download with "<samp>pip install pronouncing</samp>" and read the documentation <a class="text-danger" href="https://pronouncing.readthedocs.io/en/latest/">here</a>.</li>
+            <li><samp>playsound</samp>: This Python library only adds one function, "playsound" which is used to play audio (specifically mp3s) from a Python program. You can download it with  "<samp>pip install playsound</samp>". In order to use this, I also had to download PyObjC for some reason, so if you have an issue running playsound, try running "<samp>pip3 install -U PyObjC</samp>".</li>
+            <li>Here is where you customize the voice: In the same folder as voice_emulator.py, make a folder that has all of the pronunciation audio files in it. For example, for the phoneme "AA", you need its pronunciation stored in a file at "folder_name/AA.mp3". If any of this is confusing, take a look at the project on my GitHub and just copy the format there.</li>
+        </ul>
+        After completing the setup, simply run the program from your terminal with:<br>
+        <samp>$ python3 voice_emulator.py folder_name</samp>
+    </div>
+    <br>
+    <h3>Conclusions & Next Steps</h3>
+    <div style="margin-left: 40px;">
+        Okay, so, I am well aware this is not the best voice emulator in the world LOL. However, I would say you can pretty much understand everything that is said as well as whose voice it is, and that's pretty cool! Considering I recorded all the sounds in 20 minutes using my default MacBook mic, used a single example word as guidance for each ARPABET pronunciation, and spent 10 minutes clipping each recording to scale, I don't think it turned out too bad! With this super simple format, it would be easy to make a bot of someone with even a small amount of available audio.
+        <br>
+        <br>
+        Beyond the obvious and pedantic things like using a better mic, pronouncing the sounds better, and clipping the audio better, the best way to improve the project would be to simply increase the number of sounds. While I ignored them in my implementation, ARPABET actually also uses stresses, which indicate what syllable to add the main or secondary stress on when you speak a word. Adding these would require each phoneme to be recorded multiple times (once for each tier of stress) but would, obviously, increase how accurate or "human" it sounds. I could also account for punctuation stresses, such as questioning tone (?), exclamation (!), or trailing (...). Lastly, I could switch from ARPABET to "International Phonetic Alphabet" or "IPA", as IPA accounts for a few more sounds than the version of ARPABET I'm using in this project.
+    </div>
+<br>
+<br>
+</div>
+</div>
+
+{% endblock %} 

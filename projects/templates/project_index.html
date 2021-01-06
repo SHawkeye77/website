@@ -16,38 +16,42 @@
     </h6>
     <hr>
     <div class="row">
-        <!-- Website -->
+        <!-- SWRPG Dice Roller -->
         <div class="col-md-4">
             <div class="card bg-secondary mb-2">
-                <img class="card-img-top" src="{% static 'projects/images/website.png' %}">
+                <img class="card-img-top" src="{% static 'projects/images/all_dice.png' %}">
                 <div class="card-body">
-                    <h5 class="card-title">Website</h5>
-                    <p class="card-text">This website (very meta)</p>
-                    <center><a href="website" class="btn btn-primary">Read More</a></center>
+                    <h5 class="card-title">SWRPG Dice Roller</h5>
+                    <p class="card-text">
+                        An online dice roller (written in JavaScript) written so my friends and I can all play even if we don't each have a set of dice.
+                    </p>
+                    <center><a href="swrpg_dice" class="btn btn-primary">Read More</a></center>
                 </div>
             </div>
         </div>
-
-        <!-- game_1 -->
+        <!-- Voice Emulator -->
         <div class="col-md-4">
             <div class="card bg-secondary mb-2">
-                <img class="card-img-top" src="{% static 'projects/images/game_1.png' %}">
+                <img class="card-img-top" src="{% static 'projects/images/voice.png' %}">
                 <div class="card-body">
-                    <h5 class="card-title">game_1</h5>
-                    <p class="card-text">A sci-fi, text adventure game based on Zork</p>
-                    <center><a href="game_1" class="btn btn-primary">Read More</a></center>
+                    <h5 class="card-title">Voice Emulator</h5>
+                    <p class="card-text">
+                        Uses the 39 phonems of ARPABET to create a custom text-to-speech bot of a recorded voice.
+                    </p>
+                    <center><a href="voice_emulator" class="btn btn-primary">Read More</a></center>
                 </div>
             </div>
         </div>
-
-        <!-- Sadness Trance Journal -->
+        <!-- Chatbot -->
         <div class="col-md-4">
             <div class="card bg-secondary mb-2">
-                <img class="card-img-top" src="{% static 'projects/images/stj.png' %}">
+                <img class="card-img-top" src="{% static 'projects/images/chatbot_example.png' %}">
                 <div class="card-body">
-                    <h5 class="card-title">STJ</h5>
-                    <p class="card-text">A silly relaxation app</p>
-                    <center><a href="stj" class="btn btn-primary">Read More</a></center>
+                    <h5 class="card-title">Chatbot</h5>
+                    <p class="card-text">
+                        A markov chain based text analysis bot that:<ol><li>Reads and sorts through any given text file then <li>Produces a random string of characters of a specified length "speaking" like the analyzed text. 
+                    </p>
+                    <center><a href="chatbot" class="btn btn-primary">Read More</a></center>
                 </div>
             </div>
         </div>
@@ -96,7 +100,44 @@
     </div>
     <hr>
     <div class="row">
+        <!-- Website -->
+        <div class="col-md-4">
+            <div class="card bg-secondary mb-2">
+                <img class="card-img-top" src="{% static 'projects/images/website.png' %}">
+                <div class="card-body">
+                    <h5 class="card-title">Website</h5>
+                    <p class="card-text">This website (very meta)</p>
+                    <center><a href="website" class="btn btn-primary">Read More</a></center>
+                </div>
+            </div>
+        </div>
 
+        <!-- game_1 -->
+        <div class="col-md-4">
+            <div class="card bg-secondary mb-2">
+                <img class="card-img-top" src="{% static 'projects/images/game_1.png' %}">
+                <div class="card-body">
+                    <h5 class="card-title">game_1</h5>
+                    <p class="card-text">A sci-fi, text adventure game based on Zork</p>
+                    <center><a href="game_1" class="btn btn-primary">Read More</a></center>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sadness Trance Journal -->
+        <div class="col-md-4">
+            <div class="card bg-secondary mb-2">
+                <img class="card-img-top" src="{% static 'projects/images/stj.png' %}">
+                <div class="card-body">
+                    <h5 class="card-title">STJ</h5>
+                    <p class="card-text">A silly relaxation app</p>
+                    <center><a href="stj" class="btn btn-primary">Read More</a></center>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
         <!-- Conway's Game of Life -->
         <div class="col-md-4">
             <div class="card bg-secondary mb-2">
@@ -110,36 +151,6 @@
                 </div>
             </div>
         </div>
-
-        <!-- Chatbot -->
-        <div class="col-md-4">
-            <div class="card bg-secondary mb-2">
-                <img class="card-img-top" src="{% static 'projects/images/chatbot_example.png' %}">
-                <div class="card-body">
-                    <h5 class="card-title">Chatbot</h5>
-                    <p class="card-text">
-                        A markov chain based text analysis bot that (1) reads and sorts through a text file then (2) produces a random string of characters of a specified length "speaking" like the analyzed text.
-                    </p>
-                    <center><a href="chatbot" class="btn btn-primary">Read More</a></center>
-                </div>
-            </div>
-        </div>
-
-        <!-- SWRPG Dice Roller -->
-        <div class="col-md-4">
-            <div class="card bg-secondary mb-2">
-                <img class="card-img-top" src="{% static 'projects/images/all_dice.png' %}">
-                <div class="card-body">
-                    <h5 class="card-title">SWRPG Dice Roller</h5>
-                    <p class="card-text">
-                        An online dice roller (written in JavaScript) written so my friends and I can all play even if we don't each have a set of dice.
-                    </p>
-                    <center><a href="swrpg_dice" class="btn btn-primary">Read More</a></center>
-                </div>
-            </div>
-        </div>
-
     </div>
-</div>
 </div>
 {% endblock %}

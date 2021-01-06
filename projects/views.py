@@ -42,3 +42,7 @@ def chatbot(request):
 # View SWRPG Dice Roller Page
 def swrpg_dice(request):
     return render(request, "swrpg_dice.html", {})
+
+# View Voice Emulator Page
+def voice_emulator(request):
+    return render(request, "voice_emulator.html", {})
