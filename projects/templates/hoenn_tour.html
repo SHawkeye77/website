@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% load static %}
+{% block page_content %}
+
+<!-- Loading my custom js for this page -->
+<script src="{% static 'projects/js/pokemon_map.js' %}"></script>
+
+<div class="container-fluid bg-primary">
+<div class="container bg-primary text-secondary">
+    <br>
+    <h1 class="text-center">Hoenn Tour</h1>
+    <br>
+    <!-- Row with map map and media -->
+    <div class="row">
+        <div class="col-lg-7">
+            <img src="{% static 'projects/images/hoenn_map.jpg' %}" width="100%" id="hoenn_map">
+        </div>
+        <div class="col-lg-5" id="town_section">
+            <!-- Name of location will be put here -->
+            <h3 class="text-center" id="locationName" style="text-transform: capitalize;">
+                Welcome!
+            </h3>
+            <!-- Has gif of town or route here -->
+            <div id="locationGif" style="border:5px solid">
+                <img src="{% static 'projects/images/select_town_city.png' %}" width="100%" >
+            </div>
+            <hr>
+            <!-- Audio Player -->
+            <div class="text-center">
+                <audio controls loop autoplay id="pokeMusicPlayer">
+                    <source src="" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio> 
+            </div>
+            <!-- FOR DEBUGGING -->
+            <div>
+                <p>xRatio: <span id="xRatio"></span></p>
+                <p>yRatio: <span id="yRatio"></span></p>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <h2>Project Details</h2>
+        <ul>
+            <li><b>Motivation:</b> Thanks for checking out my Hoenn Tour page! I made this as a tribute to the Hoenn region, the setting of my first and one of my favorite video games of all time, Pokemon Ruby. In my opinion, the best part of Pokemon is the simple, relaxing scenes and nostalgic audio, so that's what I added!</li>
+            <li><b>Map Image:</b> The map image was taken from the page of DeviantArt user cow41087. You can find the image <a href="https://www.deviantart.com/cow41087/art/Hoenn-Map-251394445" class="text-danger">here</a>.
+            <li><b>TODO:</b> Ideally, I would like to extend this to include all routes, and maybe even the other points of interest. The only issue with this is that each POI requires me to upload a GIF and MP3 file, and this can take up a lot of space if I start adding a lot.</li>
+        </ul>
+        <h2>Technical Details</h2>
+        <ul>
+            <li><b>Gifs/Audio:</b> For the gifs, I started by emulating Pokemon Emerald on an emulator (OpenEmu). I went to each town and screencaptured a position I liked, then converted it into a gif. The audio was just ripped from YouTube videos.</li>
+            <li><b>Getting position on the map:</b> This was really the only tricky part of this. To get the location of each POI on the map, I hard-coded in the ratio of the left and right edges of a POI (over the total pixel width of the image) and the ratio of the top and bottom edges of a POI (over the total pixel height of the image), and checked if the x and y ratios of a click was within any of those bounds. If it was, I updated the gif, name, and audio, otherwise the click was ignored.</li>
+    </div>
+    <br>
+</div>
+</div>
+
+<script language="JavaScript" type="text/javascript">
+    var mapImg = document.getElementById("hoenn_map");
+    mapImg.onmousedown = onMapClick;
+</script>
+
+{% endblock %}

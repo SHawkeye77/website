@@ -46,3 +46,8 @@ def swrpg_dice(request):
 # View Voice Emulator Page
 def voice_emulator(request):
     return render(request, "voice_emulator.html", {})
+
+# View Hoenn Tour Page
+def hoenn_tour(request):
+    return render(request, "hoenn_tour.html", {})
+

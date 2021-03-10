@@ -1,4 +1,5 @@
 //////////////////////////////////// PLAYLIST SETUP FUNCTIONS ////////////////////////////////////
+const apiKey = "AIzaSyCVczF3xCpWyCbxJ4uQGiipteBxuPSxLgw";
 
 // Gathers user input and returns object "obtions" for the API call
 const gather_user_input = async(link) => {
@@ -11,7 +12,7 @@ const gather_user_input = async(link) => {
         part : "snippet",
         playlistId : playlist_id,
         pageToken : null,
-        key : "AIzaSyCVczF3xCpWyCbxJ4uQGiipteBxuPSxLgw",  // (API key from personal, casual account)
+        key : apiKey,                                     // (API key from personal, casual account)
         maxResults : 50,                                  // 50 is the max value allowed for max results
     };
 
@@ -103,7 +104,7 @@ firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 // The API calls onYouTubeIframeAPIReady() on API code download
 var player;
 function onYouTubeIframeAPIReady() {
-    // ... //
+    /* ... */
 }
 
 // Player calls onPlayerReady() whenever the video player is ready
@@ -175,7 +176,7 @@ var shuffled_video_ids;
 var num_api_calls;
 var num_vids;
 var curr_vid;  // Array index of the current video
-var player_loaded
+var player_loaded;
 
 // Main function called by hitting the "Shuffle Playlist" button
 const on_shuffle_playlist = async() => {
