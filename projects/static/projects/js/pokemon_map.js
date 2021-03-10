@@ -141,12 +141,8 @@ function onMapClick(e) {
     posY = posY - imgPos[1];
 
     // Dividing by total width & height to get a ratio. This way, screen-resizing is accounted for.
-    console.log(posX)
-    console.log(mapImg.clientWidth)
     var xRatio = posX / mapImg.clientWidth; 
     var yRatio = posY / mapImg.clientHeight;
-    document.getElementById("xRatio").innerHTML = xRatio;
-    document.getElementById("yRatio").innerHTML = yRatio;
 
     // Sending data about the ratio to function to update visuals
     updatePage(xRatio, yRatio); 
